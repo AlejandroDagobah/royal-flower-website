@@ -1,0 +1,18 @@
+{
+    "header":{
+        "menuLeft":[
+            {"value":"Roses", "url": ""}, 
+            {"value":"Garden Roses", "url": ""}, 
+            {"value":"Spray Roses", "url": ""}, 
+            {"value":"Summer Flowers", "url": ""}
+        ],
+        "menuRight":[
+            {"value":"About", "url": ""}, 
+            {"value":"Blog", "url": ""}, 
+            {"value":"Contact", "url": ""}        
+        ],
+        "searchBar":{
+            "text": "What are you looking for?"
+        }
+    }
+}

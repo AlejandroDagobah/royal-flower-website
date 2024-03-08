@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+    @font-face {
+        font-family: 'Caslon Italic';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('/static/fonts/Caslon-540-Italic.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'FuturaNowHeadline';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('/static/fonts/Caslon-540-Italic.woff') format('woff');
+    }
+    
+    /* @font-face {
+        font-family: 'Futura-Now-Headline';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('/static/fonts/Futura-Now-Headline.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Futura-Now-Headline';
+        font-style: light;
+        font-weight: 400;
+        font-display: swap;
+        src: local('/static/fonts/Futura-Now-Headline-Light.woff') format('woff');
+    }
+ */
+    body{
+        @apply bg-cream
+    }
+
+    * {
+        @apply font-default
+    }
+
+    h1{
+        font-size: 47.78px;
+        font-style: light;
+    }
+    
+    h2{ 
+        font-size: 39.81px;
+    }
+    
+    h3{
+        font-size: 33.18px;
+    }
+    
+    h4{
+        font-size: 27.65px;
+    }
+    
+    h5{
+        font-size: 23.04px;
+    }
+    
+    h6{
+        font-size: 19.02px;
+    }
+
+
+}
