@@ -8,8 +8,6 @@ export default function Header() {
 
     const menuLeft = info.header.menuLeft.map((item)=>{
         
-        console.log(item);
-
         return(
             <Link to={item.url} className='uppercase mt-[4px] no-underline hover:underline underline-offset-8'>{item.value}</Link>      
         )

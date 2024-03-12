@@ -26,7 +26,8 @@ module.exports = {
     colors: {
       'charcoal': '#2B2B29',
       'cream': '#F6F5F2',
-      'gray': '#5A5A5A'
+      'gray': '#5A5A5A',
+      'white': '#FFFFFF'
     }
 
   },

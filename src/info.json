@@ -17,5 +17,15 @@
     },
     "hero":{
         "text": "Discover our collection"
+    },
+    "slider":{
+        "quantity": 5,
+        "products": [
+            {"url": "#", "image": "/static/BLACK_MAGIC-1.png"},
+            {"url": "#", "image": "/static/CHERRY-LOVE-1.png"},
+            {"url": "#", "image": "/static/EXPLORER-1.png"},
+            {"url": "#", "image": "/static/FREEDOM-1.png"},
+            {"url": "#", "image": "/static/RED-PANTHER-1.png"}
+        ]
     }
 }
