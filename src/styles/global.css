@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base{
 
     @font-face {
@@ -69,5 +71,8 @@
         font-size: 19.02px;
     }
 
+    video{
+        max-width: fit-content;
+    }
 
 }

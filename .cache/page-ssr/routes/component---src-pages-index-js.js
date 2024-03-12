@@ -123,6 +123,35 @@ var defaultAttributes = {
 
 /***/ }),
 
+/***/ "./node_modules/@tabler/icons-react/dist/esm/icons/IconMenu2.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@tabler/icons-react/dist/esm/icons/IconMenu2.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ IconMenu2)
+/* harmony export */ });
+/* harmony import */ var _createReactComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createReactComponent.js */ "./node_modules/@tabler/icons-react/dist/esm/createReactComponent.js");
+/**
+ * @tabler/icons-react v2.47.0 - MIT
+ */
+
+
+
+var IconMenu2 = (0,_createReactComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"])("menu-2", "IconMenu2", [
+  ["path", { d: "M4 6l16 0", key: "svg-0" }],
+  ["path", { d: "M4 12l16 0", key: "svg-1" }],
+  ["path", { d: "M4 18l16 0", key: "svg-2" }]
+]);
+
+
+//# sourceMappingURL=IconMenu2.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/@tabler/icons-react/dist/esm/icons/IconSearch.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@tabler/icons-react/dist/esm/icons/IconSearch.js ***!
@@ -983,7 +1012,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _info_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../info.json */ "./src/info.json");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
-/* harmony import */ var _tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tabler/icons-react */ "./node_modules/@tabler/icons-react/dist/esm/icons/IconSearch.js");
+/* harmony import */ var _tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tabler/icons-react */ "./node_modules/@tabler/icons-react/dist/esm/icons/IconMenu2.js");
+/* harmony import */ var _tabler_icons_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @tabler/icons-react */ "./node_modules/@tabler/icons-react/dist/esm/icons/IconSearch.js");
 
 
 
@@ -994,14 +1024,14 @@ function Header() {
     console.log(item);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: item.url,
-      className: "uppercase mt-[4px]"
+      className: "uppercase mt-[4px] no-underline hover:underline underline-offset-8"
     }, item.value);
   });
   const menuRight = _info_json__WEBPACK_IMPORTED_MODULE_1__.header.menuRight.map(item => {
     console.log(item);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: item.url,
-      className: "uppercase mt-[4px]"
+      className: "uppercase mt-[4px] no-underline hover:underline underline-offset-8"
     }, item.value);
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
@@ -1009,7 +1039,7 @@ function Header() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-row justify-between py-3 px-[20px] border-b border-charcoal"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
-    className: "flex-1 flex flex-row gap-4"
+    className: "flex-1 flex flex-row gap-4 items-center"
   }, menuLeft), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: " flex justify-center",
     style: {
@@ -1021,14 +1051,23 @@ function Header() {
     src: "../images/logo-royal-flower.png",
     __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3850885250.json */ "./.cache/caches/gatsby-plugin-image/3850885250.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
-    className: "flex-1 flex flex-row gap-4 justify-end"
-  }, menuRight)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "flex-1 flex flex-row gap-4 justify-end items-center"
+  }, menuRight, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
+    className: "max-w-[26px] bg-cover my-auto",
+    placeholder: "color",
+    src: "../images/icon-royal-flowers.png",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/287278811.json */ "./.cache/caches/gatsby-plugin-image/287278811.json")
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    stroke: 1
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-row py-3 px-[20px] border-b border-charcoal gap-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "mt-[1px]"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "uppercase mt-[4px]"
-  }, _info_json__WEBPACK_IMPORTED_MODULE_1__.header.searchBar.text)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "mt-[1px] align-middle"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    type: "text",
+    className: "mt-[4px] w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none",
+    placeholder: _info_json__WEBPACK_IMPORTED_MODULE_1__.header.searchBar.text
+  })));
 }
 
 /***/ }),
@@ -1051,8 +1090,28 @@ __webpack_require__.r(__webpack_exports__);
 function IndexPage() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
     className: "flex flex-col gap-10"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Congratulations", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "\u2014 you just made a Gatsby site! \uD83C\uDF89\uD83C\uDF89\uD83C\uDF89")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), "a", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("video", {
+    autoPlay: true,
+    muted: true,
+    loop: true,
+    id: "video",
+    className: "w-full h-[100vh] fixed r-0 b-0 min-w-[100%] min-h-[100%]"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("source", {
+    className: "h-[100vh]",
+    src: "/static/homepage-hero-video.mp4",
+    type: "video/mp4"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Congratulations", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "\u2014 you just made a Gatsby site! \uD83C\uDF89\uD83C\uDF89\uD83C\uDF89")));
 }
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/287278811.json":
+/*!**********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/287278811.json ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png","srcSet":"/static/37c34565eee31294c1925730acd3962f/8171b/icon-royal-flowers.png 13w,\\n/static/37c34565eee31294c1925730acd3962f/50704/icon-royal-flowers.png 26w,\\n/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png 52w","sizes":"(min-width: 52px) 52px, 100vw"},"sources":[{"srcSet":"/static/37c34565eee31294c1925730acd3962f/74a40/icon-royal-flowers.webp 13w,\\n/static/37c34565eee31294c1925730acd3962f/0d336/icon-royal-flowers.webp 26w,\\n/static/37c34565eee31294c1925730acd3962f/6a337/icon-royal-flowers.webp 52w","type":"image/webp","sizes":"(min-width: 52px) 52px, 100vw"}]},"width":52,"height":55}');
 
 /***/ }),
 
