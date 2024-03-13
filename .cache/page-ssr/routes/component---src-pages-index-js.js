@@ -1140,29 +1140,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _info_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../info.json */ "./src/info.json");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
 
 
 
 
 function Slider() {
+  const [isOnViewport, setIsOnViewPort] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
     const slider = document.getElementById("product-slider");
     slider.addEventListener('wheel', e => {
       e.preventDefault();
-      slider.scrollLeft += e.deltaY * 3;
+      slider.scrollLeft += e.deltaY;
+      isScrolledIntoView(slider);
     });
+    function isScrolledIntoView(container) {
+      var offset = container.offsetWidth * 0.1;
+      var docViewLeft = container.scrollLeft - offset;
+
+      // console.log(docViewLeft);
+
+      var containerChilds = container.childNodes;
+      var secondElement = containerChilds[containerChilds.length - 4];
+      console.log(secondElement.offsetLeft - docViewLeft);
+      if (secondElement.offsetLeft > docViewLeft) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    }
+    isScrolledIntoView(slider);
   });
   const colors = ['#2431F5', '#24F5CC', '#C8F524', "#F52E24"];
   const products = [..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products].map(product => {
     console.log(product.image);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "w-[400px] h-[60%] snap-center"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
-      src: "../static/FREEDOM-1.png",
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: product.image,
       alt: "",
-      className: "h-full",
-      __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3609672767.json */ "./.cache/caches/gatsby-plugin-image/3609672767.json")
+      className: "object-contain"
     }));
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -16407,16 +16423,6 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/3609672767.json":
-/*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/3609672767.json ***!
-  \***********************************************************/
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/0438ad6bd8430bf1f72d91e4919e44ed/4c833/FREEDOM-1.png","srcSet":"/static/0438ad6bd8430bf1f72d91e4919e44ed/e2917/FREEDOM-1.png 334w,\\n/static/0438ad6bd8430bf1f72d91e4919e44ed/5bc15/FREEDOM-1.png 667w,\\n/static/0438ad6bd8430bf1f72d91e4919e44ed/4c833/FREEDOM-1.png 1334w","sizes":"(min-width: 1334px) 1334px, 100vw"},"sources":[{"srcSet":"/static/0438ad6bd8430bf1f72d91e4919e44ed/eff20/FREEDOM-1.webp 334w,\\n/static/0438ad6bd8430bf1f72d91e4919e44ed/98931/FREEDOM-1.webp 667w,\\n/static/0438ad6bd8430bf1f72d91e4919e44ed/31d20/FREEDOM-1.webp 1334w","type":"image/webp","sizes":"(min-width: 1334px) 1334px, 100vw"}]},"width":1334,"height":2000}');
-
-/***/ }),
-
 /***/ "./.cache/caches/gatsby-plugin-image/3850885250.json":
 /*!***********************************************************!*\
   !*** ./.cache/caches/gatsby-plugin-image/3850885250.json ***!
@@ -16433,7 +16439,7 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
   \***********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"header":{"menuLeft":[{"value":"Roses","url":""},{"value":"Garden Roses","url":""},{"value":"Spray Roses","url":""},{"value":"Summer Flowers","url":""}],"menuRight":[{"value":"About","url":""},{"value":"Blog","url":""},{"value":"Contact","url":""}],"searchBar":{"text":"What are you looking for?"}},"hero":{"text":"Discover our collection"},"slider":{"quantity":10,"products":[{"url":"#","image":"../static/BLACK_MAGIC-1.png"},{"url":"#","image":"../static/CHERRY-LOVE-1.png"},{"url":"#","image":"../static/EXPLORER-1.png"},{"url":"#","image":"../static/FREEDOM-1.png"},{"url":"#","image":"../static/RED-PANTHER-1.png"}]}}');
+module.exports = JSON.parse('{"header":{"menuLeft":[{"value":"Roses","url":""},{"value":"Garden Roses","url":""},{"value":"Spray Roses","url":""},{"value":"Summer Flowers","url":""}],"menuRight":[{"value":"About","url":""},{"value":"Blog","url":""},{"value":"Contact","url":""}],"searchBar":{"text":"What are you looking for?"}},"hero":{"text":"Discover our collection"},"slider":{"quantity":5,"products":[{"url":"#","image":"/static/BLACK_MAGIC-1.png"},{"url":"#","image":"/static/CHERRY-LOVE-1.png"},{"url":"#","image":"/static/EXPLORER-1.png"},{"url":"#","image":"/static/FREEDOM-1.png"},{"url":"#","image":"/static/RED-PANTHER-1.png"}]}}');
 
 /***/ })
 

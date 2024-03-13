@@ -7,6 +7,8 @@ import { animate, motion, scroll } from "framer-motion"
 
 import { IconMouse } from "@tabler/icons-react"
 
+import Footer from "../components/footer"
+
 
 export default function IndexPage(){
 
@@ -45,6 +47,9 @@ export default function IndexPage(){
       </motion.div>
 
       <Slider/>
+
+      <Footer/>
+
       
     </main>
   )
