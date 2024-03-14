@@ -1137,11 +1137,9 @@ function Footer(props) {
     className: " flex gap-5 justify-center"
   }, lines), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "py-2 px-2 border aspect-square hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-    href: "#",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     onClick: Toggle,
     className: "px-6 py-2 border uppercase hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out"
   }, "Inquire for purchase"))));
@@ -1181,7 +1179,7 @@ function Form(props) {
     props.setVisible(prevState => !prevState);
   }
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `overflow-x-none h-full absolute top-0 right-0 w-[30vw] min-w-[400px] bg-charcoal z-30 text-cream flex flex-col justify-center px-16 transition-all duration-400 translate-x-[40vw] ${props.visible ? 'translate-x-[0vw]' : 'translate-x-[40vw]'}`
+    className: `overflow-x-none h-full absolute top-0 right-0 w-[30vw] min-w-[400px] bg-charcoal z-30 text-cream flex flex-col justify-center px-16 transition-all duration-400 translate-x-[0vw] ${props.visible ? 'translate-x-[40vw]' : 'translate-x-[0vw]'}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "self-end -mr-2 mb-4 cursor-pointer",
     onClick: Toggle
@@ -1245,6 +1243,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Header() {
   const menuLeft = _info_json__WEBPACK_IMPORTED_MODULE_1__.header.menuLeft.map(item => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
@@ -1287,7 +1286,10 @@ function Header() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 items-center"
   }, menuLeft), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: " flex justify-center",
+    onClick: () => {
+      (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/");
+    },
+    className: "cursor-pointer flex justify-center",
     style: {
       height: "100%"
     }
@@ -1338,16 +1340,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function ProductCard(props) {
   const [isOver, setIsOver] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "w-[15vw] min-w-[200px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer",
+    className: `w-[15vw] min-w-[200px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer`,
     key: props.index,
     id: props.index,
+    onClick: () => {
+      (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/product-page");
+    },
     onMouseOver: () => setIsOver(true),
     onMouseLeave: () => setIsOver(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: ".../static/BLACK_MAGIC-1.png",
+    src: props.image,
     alt: "",
     className: "object-contain"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", {
@@ -1532,6 +1538,7 @@ function Slider(props) {
   const products = productList.map((product, index) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_product_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
       image: product.image,
+      size: 15,
       title: product.title,
       index: index
     });
@@ -16853,7 +16860,7 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
   \***********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"header":{"menuLeft":[{"value":"Roses","url":""},{"value":"Garden Roses","url":""},{"value":"Spray Roses","url":""},{"value":"Summer Flowers","url":""}],"menuRight":[{"value":"About","url":""},{"value":"Blog","url":""},{"value":"Contact","url":""}],"searchBar":{"text":"What are you looking for?"}},"hero":{"text":"Discover our collection"},"slider":{"quantity":5,"products":[{"url":"#","image":"../../images/BLACK_MAGIC-1.png","title":"Black Magic"},{"url":"#","image":"../images/CHERRY-LOVE-1.png","title":"Cherry Love"},{"url":"#","image":"../images/EXPLORER-1.png","title":"Explorer"},{"url":"#","image":"../images/FREEDOM-1.png","title":"Freedom"},{"url":"#","image":"../images/RED-PANTHER-1.png","title":"Red Panther"}]},"productPage":{"images":["/static/BLACK_MAGIC-1.png","/static/BLACK_MAGIC-1.png","/static/BLACK_MAGIC-1.png"],"title":"Black Magic","description":"A bewitching floral enchantment that commands attention with its deep, velvety allure. Each petal is a dark symphony, an exquisite play of shades ranging from velvety burgundy to rich, almost black tones. This captivating rose exudes an air of mystery and sophistication, making it a symbol of timeless elegance and dramatic beauty.","features":[{"field":"Color","value":"red"},{"field":"Head Size","value":"7 cm"},{"field":"Length","value":"50cm - 80cm"},{"field":"Vase Life","value":"15 Days"}]},"form":{"inputs":[{"placeholder":"Name"},{"placeholder":"Email"},{"placeholder":"Phone N."},{"placeholder":"Country, City"},{"placeholder":"Quantity Required"}]}}');
+module.exports = JSON.parse('{"header":{"menuLeft":[{"value":"Roses","url":""},{"value":"Garden Roses","url":""},{"value":"Spray Roses","url":""},{"value":"Summer Flowers","url":""}],"menuRight":[{"value":"About","url":""},{"value":"Blog","url":""},{"value":"Contact","url":""}],"searchBar":{"text":"What are you looking for?"}},"hero":{"text":"Discover our collection"},"slider":{"quantity":5,"products":[{"url":"#","image":"/static/BLACK_MAGIC-1.png","title":"Black Magic"},{"url":"#","image":"/static/CHERRY-LOVE-1.png","title":"Cherry Love"},{"url":"#","image":"/static/EXPLORER-1.png","title":"Explorer"},{"url":"#","image":"/static/FREEDOM-1.png","title":"Freedom"},{"url":"#","image":"/static/RED-PANTHER-1.png","title":"Red Panther"}]},"productPage":{"images":["/static/BLACK_MAGIC-4.png","/static/BLACK_MAGIC-2.png","/static/BLACK_MAGIC-3.png"],"title":"Black Magic","description":"A bewitching floral enchantment that commands attention with its deep, velvety allure. Each petal is a dark symphony, an exquisite play of shades ranging from velvety burgundy to rich, almost black tones. This captivating rose exudes an air of mystery and sophistication, making it a symbol of timeless elegance and dramatic beauty.","features":[{"field":"Color","value":"red"},{"field":"Head Size","value":"7 cm"},{"field":"Length","value":"50cm - 80cm"},{"field":"Vase Life","value":"15 Days"}]},"form":{"inputs":[{"placeholder":"Name"},{"placeholder":"Email"},{"placeholder":"Phone N."},{"placeholder":"Country, City"},{"placeholder":"Quantity Required"}]}}');
 
 /***/ })
 
