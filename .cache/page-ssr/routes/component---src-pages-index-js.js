@@ -1349,7 +1349,7 @@ function ProductCard(props) {
     className: `w-[15vw] min-w-[200px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer`,
     key: props.index,
     id: props.index,
-    onClick: () => {
+    onMouseDown: () => {
       (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/product-page");
     },
     onMouseOver: () => setIsOver(true),
@@ -1357,10 +1357,7 @@ function ProductCard(props) {
     onTouchStart: () => {
       setIsOver(true);
     },
-    onTouchMove: () => setIsOver(false),
-    onTouchEnd: () => {
-      (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/product-page");
-    }
+    onTouchEnd: () => setIsOver(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: props.image,
     alt: "",
@@ -1743,7 +1740,7 @@ function IndexPage() {
     loop: true,
     className: "min-h-[100vh] min-w-[100%] opacity-60 z-0 absolute"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("source", {
-    src: '/static/home-page-hero-video.mp4',
+    src: '/home-page-hero-video.mp4',
     type: "video/mp4"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_slider__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
     number: currentNumber,

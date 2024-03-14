@@ -125,7 +125,7 @@ export default function IndexPage(){
           </div>
         </div>
         <video autoPlay muted loop className="min-h-[100vh] min-w-[100%] opacity-60 z-0 absolute">
-          <source src={'../images/home-page-hero-video.mp4'} type="video/mp4"/>
+          <source src={'../../static/home-page-hero-video.mp4'} type="video/mp4"/>
         </video>
 
       </motion.div>

@@ -1225,7 +1225,7 @@ function ProductCard(props) {
     className: `w-[15vw] min-w-[200px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer`,
     key: props.index,
     id: props.index,
-    onClick: () => {
+    onMouseDown: () => {
       (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/product-page");
     },
     onMouseOver: () => setIsOver(true),
@@ -1233,10 +1233,7 @@ function ProductCard(props) {
     onTouchStart: () => {
       setIsOver(true);
     },
-    onTouchMove: () => setIsOver(false),
-    onTouchEnd: () => {
-      (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/product-page");
-    }
+    onTouchEnd: () => setIsOver(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: props.image,
     alt: "",
@@ -1264,6 +1261,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _info_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../info.json */ "./src/info.json");
 /* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/form */ "./src/components/form.jsx");
 /* harmony import */ var _components_product_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/product-card */ "./src/components/product-card.jsx");
+/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
+
 
 
 
@@ -1305,22 +1304,25 @@ function ProductPage() {
     className: "flex flex-row justify-center items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: `flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _info_json__WEBPACK_IMPORTED_MODULE_2__.productPage.images[0],
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
+    src: '../images/BLACK_MAGIC-4.png',
     alt: "",
-    className: "object-contain"
+    className: "object-contain",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3089707754.json */ "./.cache/caches/gatsby-plugin-image/3089707754.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: `flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _info_json__WEBPACK_IMPORTED_MODULE_2__.productPage.images[1],
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
+    src: '../images/BLACK_MAGIC-2.png',
     alt: "",
-    className: "object-contain"
+    className: "object-contain",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3230568205.json */ "./.cache/caches/gatsby-plugin-image/3230568205.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: `flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: _info_json__WEBPACK_IMPORTED_MODULE_2__.productPage.images[2],
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
+    src: '../images/BLACK_MAGIC-3.png',
     alt: "",
-    className: "object-contain"
+    className: "object-contain",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1951188072.json */ "./.cache/caches/gatsby-plugin-image/1951188072.json")
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: " flex gap-5 justify-center h-[50px] mt-16"
   }, lines)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1354,6 +1356,16 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
 
 /***/ }),
 
+/***/ "./.cache/caches/gatsby-plugin-image/1951188072.json":
+/*!***********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/1951188072.json ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/e80b5fceb78a6942225a8d93b2f62234/c05e2/BLACK_MAGIC-3.png","srcSet":"/static/e80b5fceb78a6942225a8d93b2f62234/3e47a/BLACK_MAGIC-3.png 438w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/39b59/BLACK_MAGIC-3.png 876w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/c05e2/BLACK_MAGIC-3.png 1752w","sizes":"(min-width: 1752px) 1752px, 100vw"},"sources":[{"srcSet":"/static/e80b5fceb78a6942225a8d93b2f62234/4c6de/BLACK_MAGIC-3.webp 438w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/2b347/BLACK_MAGIC-3.webp 876w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/e8274/BLACK_MAGIC-3.webp 1752w","type":"image/webp","sizes":"(min-width: 1752px) 1752px, 100vw"}]},"width":1752,"height":2628}');
+
+/***/ }),
+
 /***/ "./.cache/caches/gatsby-plugin-image/2069002092.json":
 /*!***********************************************************!*\
   !*** ./.cache/caches/gatsby-plugin-image/2069002092.json ***!
@@ -1361,6 +1373,26 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
 /***/ ((module) => {
 
 module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/c6a2525c548497900abc3c32b3143498/07f14/logo-royal-flower.png","srcSet":"/static/c6a2525c548497900abc3c32b3143498/6856d/logo-royal-flower.png 89w,\\n/static/c6a2525c548497900abc3c32b3143498/61254/logo-royal-flower.png 178w,\\n/static/c6a2525c548497900abc3c32b3143498/07f14/logo-royal-flower.png 355w","sizes":"(min-width: 355px) 355px, 100vw"},"sources":[{"srcSet":"/static/c6a2525c548497900abc3c32b3143498/4b9db/logo-royal-flower.webp 89w,\\n/static/c6a2525c548497900abc3c32b3143498/94d16/logo-royal-flower.webp 178w,\\n/static/c6a2525c548497900abc3c32b3143498/21b05/logo-royal-flower.webp 355w","type":"image/webp","sizes":"(min-width: 355px) 355px, 100vw"}]},"width":355,"height":55}');
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/3089707754.json":
+/*!***********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/3089707754.json ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/1a41c03902ef056c6f871cbc382418f1/baacd/BLACK_MAGIC-4.png","srcSet":"/static/1a41c03902ef056c6f871cbc382418f1/d3d70/BLACK_MAGIC-4.png 407w,\\n/static/1a41c03902ef056c6f871cbc382418f1/ca2bc/BLACK_MAGIC-4.png 813w,\\n/static/1a41c03902ef056c6f871cbc382418f1/baacd/BLACK_MAGIC-4.png 1626w","sizes":"(min-width: 1626px) 1626px, 100vw"},"sources":[{"srcSet":"/static/1a41c03902ef056c6f871cbc382418f1/ae797/BLACK_MAGIC-4.webp 407w,\\n/static/1a41c03902ef056c6f871cbc382418f1/2c1f1/BLACK_MAGIC-4.webp 813w,\\n/static/1a41c03902ef056c6f871cbc382418f1/86abd/BLACK_MAGIC-4.webp 1626w","type":"image/webp","sizes":"(min-width: 1626px) 1626px, 100vw"}]},"width":1626,"height":2438}');
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/3230568205.json":
+/*!***********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/3230568205.json ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/233b1963a3df8e2beee8fc23e537bcbe/814bc/BLACK_MAGIC-2.png","srcSet":"/static/233b1963a3df8e2beee8fc23e537bcbe/94260/BLACK_MAGIC-2.png 394w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/34f29/BLACK_MAGIC-2.png 787w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/814bc/BLACK_MAGIC-2.png 1574w","sizes":"(min-width: 1574px) 1574px, 100vw"},"sources":[{"srcSet":"/static/233b1963a3df8e2beee8fc23e537bcbe/a3e1f/BLACK_MAGIC-2.webp 394w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/409ea/BLACK_MAGIC-2.webp 787w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/dfafd/BLACK_MAGIC-2.webp 1574w","type":"image/webp","sizes":"(min-width: 1574px) 1574px, 100vw"}]},"width":1574,"height":2360}');
 
 /***/ }),
 
