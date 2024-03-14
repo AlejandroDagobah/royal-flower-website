@@ -6,15 +6,15 @@ export function onRenderBody({setHeadComponents}){
       <link
         key="futura"
         rel="preload"
-        href="/static/fonts/Futura-Now-Headline.woff"
+        href="../static/fonts/Futura-Now-Headline.woff2"
         as="font"
-        type="font/woff"
+        type="font/woff2"
         crossOrigin="anonymous"
       />,
       <link
         key="caslon-regular"
         rel="preload"
-        href="/static/fonts/Caslon-540-Italic.woff"
+        href="../static/fonts/Caslon-540-Italic.woff"
         as="font"
         type="font/woff"
         crossOrigin="anonymous"

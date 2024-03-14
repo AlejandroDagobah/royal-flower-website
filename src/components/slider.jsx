@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 import ProductCard from './product-card'
-
+import Footer from './footer'
 
 export default function Slider(){
 
@@ -35,7 +35,7 @@ export default function Slider(){
 
         })
         
-        slider.addEventListener('wheel', (e)=>{
+        slider.addEventListener('mousewheel', (e)=>{
             e.preventDefault()
             slider.scrollLeft += e.deltaY;
 
@@ -178,10 +178,16 @@ export default function Slider(){
     })
 
     return(
- 
-        <div className="snap-x w-full h-[100vh] grid grid-flow-col auto-cols-max items-center scroll-smooth gap-3 overflow-x-hidden overflow-x-hidden overflow-y scroll whitespace-nowrap flex-nowrap" id='product-slider'>
-            {products}
+        <div className='h-[100vh] w-full relative'>
+            
+            <div className="w-full h-full grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap" id='product-slider'>
+                {products}
+            </div>
+
+            <Footer/>
+
         </div>
+
     )
 
 }

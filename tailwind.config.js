@@ -20,7 +20,7 @@ module.exports = {
 
     },
     fontFamily:{
-      'default': ['"FuturaNowHeadline"', 'sans-serif'],
+      'default': ['"Futura Now Headline"', 'sans-serif'],
       'caslon': ['"Caslon Italic"', 'serif']
     },
     colors: {

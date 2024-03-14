@@ -9,7 +9,7 @@ export default function Header() {
     const menuLeft = info.header.menuLeft.map((item)=>{
         
         return(
-            <Link to={item.url} className='uppercase mt-[4px] no-underline hover:underline underline-offset-8'>{item.value}</Link>      
+            <Link to={item.url} className='uppercase no-underline hover:underline underline-offset-8'>{item.value}</Link>      
         )
 
     })
@@ -20,13 +20,13 @@ export default function Header() {
         console.log(item);
 
         return(
-            <Link to={item.url} className='uppercase mt-[4px] no-underline hover:underline underline-offset-8'>{item.value}</Link>      
+            <Link to={item.url} className='uppercase no-underline hover:underline underline-offset-8'>{item.value}</Link>      
         )
 
     })
 
     return(
-        <header className='w-[100%] z-10 bg-cream fixed'>
+        <header className='w-[100%] z-20 bg-cream fixed'>
             {/* Phone */}
             <div className='flex flex-row justify-between py-3 px-[20px] border-b border-charcoal lg:hidden'>
                 <div className=' flex justify-center' style={{height: "100%"}}>
@@ -39,7 +39,7 @@ export default function Header() {
             </div>
             {/* Desktop */}
 
-            <div className='flex flex-row justify-between py-3 px-[20px] border-b border-charcoal hidden lg:flex'>
+            <div className='flex flex-row justify-between py-2 px-[20px] border-b border-charcoal hidden lg:flex'>
                 <nav className='flex-1 flex flex-row gap-4 items-center'>
                     {menuLeft}
                 </nav>
@@ -53,10 +53,10 @@ export default function Header() {
 
                 </nav>
             </div>
-            <div className='flex flex-row py-3 px-[20px] border-b border-charcoal gap-3'>
+            <div className='flex flex-row py-[1vh] px-[20px] border-b border-charcoal gap-3'>
                 <IconSearch className='mt-[1px] align-middle' />
 
-                <input type="text" className='mt-[4px] w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none' placeholder={info.header.searchBar.text}/>
+                <input type="text" className='w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none' placeholder={info.header.searchBar.text}/>
             </div>
         </header>
     )
