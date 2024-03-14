@@ -38,7 +38,7 @@ export default function Slider(props){
 
         })
         
-        slider.addEventListener('wheel', (e)=>{
+        slider.addEventListener('mousewheel', (e)=>{
             e.preventDefault()
       
 
@@ -95,38 +95,38 @@ export default function Slider(props){
             elapsedTime,
             startTime
 
-        slider.addEventListener('touchstart', function(e){
-            var touchobj = e.changedTouches[0]
-            dist = 0
-            startX = touchobj.pageX
-            startY = touchobj.pageY
-            startTime = new Date().getTime() // record time when finger first makes contact with surface
-            e.preventDefault()
-        }, false)
+        // slider.addEventListener('touchstart', function(e){
+        //     var touchobj = e.changedTouches[0]
+        //     dist = 0
+        //     startX = touchobj.pageX
+        //     startY = touchobj.pageY
+        //     startTime = new Date().getTime() // record time when finger first makes contact with surface
+        //     e.preventDefault()
+        // }, false)
 
-        slider.addEventListener('touchmove', function(e){
-            e.preventDefault() // prevent scrolling when inside DIV
-        }, false)
+        // slider.addEventListener('touchmove', function(e){
+        //     e.preventDefault() // prevent scrolling when inside DIV
+        // }, false)
 
-        slider.addEventListener('touchend', function(e){
-            var touchobj = e.changedTouches[0]
-            dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
+        // slider.addEventListener('touchend', function(e){
+        //     var touchobj = e.changedTouches[0]
+        //     dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
             
-            console.log((touchobj.pageX*(-1)), touchobj.pageX);
+        //     console.log((touchobj.pageX*(-1)), touchobj.pageX);
 
-            if( touchobj.pageX > startX){
-                slider.scrollLeft += (touchobj.pageX*(-1))
-                console.log("FUE HACIA LA IZQ");
-            }
-            if(touchobj.pageX < startX){
-                slider.scrollLeft += (touchobj.pageX*(1))
-                console.log("FUE HACIA LA DER");
+        //     if( touchobj.pageX > startX){
+        //         slider.scrollLeft += (touchobj.pageX*(-1))
+        //         console.log("FUE HACIA LA IZQ");
+        //     }
+        //     if(touchobj.pageX < startX){
+        //         slider.scrollLeft += (touchobj.pageX*(1))
+        //         console.log("FUE HACIA LA DER");
 
 
-            }
+        //     }
 
-            e.preventDefault()
-        }, false)
+        //     e.preventDefault()
+        // }, false)
 
         // slider.addEventListener('wheel', (e)=>{
         //     e.preventDefault()
@@ -243,7 +243,7 @@ export default function Slider(props){
     return(
         <div className='h-[100vh] w-full relative'>
             
-            <div className="w-full h-full scroll-smooth grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap" id='product-slider'>
+            <div className="w-full h-full grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap" id='product-slider'>
                 {products}
             </div>
 

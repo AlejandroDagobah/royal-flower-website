@@ -1229,11 +1229,7 @@ function ProductCard(props) {
       (0,gatsby__WEBPACK_IMPORTED_MODULE_2__.navigate)("/product-page");
     },
     onMouseOver: () => setIsOver(true),
-    onMouseLeave: () => setIsOver(false),
-    onTouchStart: () => {
-      setIsOver(true);
-    },
-    onTouchEnd: () => setIsOver(false)
+    onMouseLeave: () => setIsOver(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: props.image,
     alt: "",
