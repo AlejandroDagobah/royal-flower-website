@@ -87,6 +87,47 @@ export default function Slider(props){
 
         })
 
+        var startX,
+            startY,
+            dist,
+            threshold = 150, //required min distance traveled to be considered swipe
+            allowedTime = 200, // maximum time allowed to travel that distance
+            elapsedTime,
+            startTime
+
+        slider.addEventListener('touchstart', function(e){
+            var touchobj = e.changedTouches[0]
+            dist = 0
+            startX = touchobj.pageX
+            startY = touchobj.pageY
+            startTime = new Date().getTime() // record time when finger first makes contact with surface
+            e.preventDefault()
+        }, false)
+
+        slider.addEventListener('touchmove', function(e){
+            e.preventDefault() // prevent scrolling when inside DIV
+        }, false)
+
+        slider.addEventListener('touchend', function(e){
+            var touchobj = e.changedTouches[0]
+            dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
+            
+            console.log((touchobj.pageX*(-1)), touchobj.pageX);
+
+            if( touchobj.pageX > startX){
+                slider.scrollLeft += (touchobj.pageX*(-1))
+                console.log("FUE HACIA LA IZQ");
+            }
+            if(touchobj.pageX < startX){
+                slider.scrollLeft += (touchobj.pageX*(1))
+                console.log("FUE HACIA LA DER");
+
+
+            }
+
+            e.preventDefault()
+        }, false)
+
         // slider.addEventListener('wheel', (e)=>{
         //     e.preventDefault()
             

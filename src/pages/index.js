@@ -51,7 +51,49 @@ export default function IndexPage(){
 
     })
 
-   
+    function handleswipe(isUpSwipe){
+      if (isUpSwipe && boolWheel === false){
+          animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 1.5}, {type: 'spring'})
+          boolWheel = true
+
+      }else{
+        console.log("NO ANIAMTING");
+      }
+  }
+
+    var startX,
+        startY,
+        dist,
+        threshold = 150, //required min distance traveled to be considered swipe
+        allowedTime = 200, // maximum time allowed to travel that distance
+        elapsedTime,
+        startTime
+
+    document.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0]
+        dist = 0
+        startX = touchobj.pageX
+        startY = touchobj.pageY
+        startTime = new Date().getTime() // record time when finger first makes contact with surface
+        e.preventDefault()
+    }, false)
+
+    document.addEventListener('touchmove', function(e){
+        e.preventDefault() // prevent scrolling when inside DIV
+    }, false)
+
+    document.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0]
+        dist = touchobj.pageY - startY // get total dist traveled by finger while in contact with surface
+        elapsedTime = new Date().getTime() - startTime // get time elapsed
+        // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
+        var swipeerUpBool = (elapsedTime <= allowedTime && dist < threshold && Math.abs(touchobj.pageX - startX) <= 100)
+        handleswipe(swipeerUpBool)
+        e.preventDefault()
+    }, false)
+
+
+
 
 
 
@@ -63,8 +105,6 @@ export default function IndexPage(){
     )
   })
   
-
-  console.log(visible);
 
   return (
     <main className="flex flex-col relative">

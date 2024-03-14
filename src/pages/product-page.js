@@ -41,19 +41,19 @@ export default function ProductPage() {
             <Header/>
             <Form visible={visible} setVisible={setVisible}/>
 
-            <div className="flex items-center w-full h-[100vh]">
-                <div className="flex flex-col -mx-10 flex-1 gap-6">
+            <div className="flex flex-col md:flex-row items-center w-full lg:h-[100vh]">
+                <div className="flex flex-col md:-mx-10 lg:flex-1 gap-6 mt-24">
                     <div className="flex flex-row justify-center items-center">
 
-                    <div className={`flex-1 min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
-                        <img src={info.productPage.images[0]} alt="" className='object-contain'/>
-                    </div>
-                    <div className={`flex-1 min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`}>
-                        <img src={info.productPage.images[1]} alt="" className='object-contain'/>
-                    </div>
-                    <div className={`flex-1 min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
-                        <img src={info.productPage.images[2]} alt="" className='object-contain'/>
-                    </div>
+                        <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
+                            <img src={info.productPage.images[0]} alt="" className='object-contain'/>
+                        </div>
+                        <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`}>
+                            <img src={info.productPage.images[1]} alt="" className='object-contain'/>
+                        </div>
+                        <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
+                            <img src={info.productPage.images[2]} alt="" className='object-contain'/>
+                        </div>
                   
                    
                     </div>
@@ -62,9 +62,9 @@ export default function ProductPage() {
                     </div>
 
                 </div>
-                <div className="flex gap-6 flex-col w-[50%] justify-center px-40">
+                <div className="flex gap-6 flex-col w-full md:w-[50%] justify-center px-8 lg:px-40 mt-8 mb-14">
                     <div>
-                        <h1 className="font-bold uppercase mb-8 w-full text-center">{info.productPage.title}</h1>
+                        <h1 className="font-bold uppercase mb-4 md:mb-8 w-full text-center">{info.productPage.title}</h1>
                         <p>{info.productPage.description}</p>
                         
                     </div>

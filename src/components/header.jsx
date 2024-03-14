@@ -16,9 +16,6 @@ export default function Header() {
 
     const menuRight = info.header.menuRight.map((item)=>{
         
-
-        console.log(item);
-
         return(
             <Link to={item.url} className='uppercase no-underline hover:underline underline-offset-8'>{item.value}</Link>      
         )
