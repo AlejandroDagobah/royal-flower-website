@@ -1810,7 +1810,8 @@ exports.components = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-js */ "component---cache-dev-404-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js?export=default */ "./.cache/dev-404-page.js?export=default")),
   "component---src-pages-404-js": () => __webpack_require__.e(/*! import() | component---src-pages-404-js */ "component---src-pages-404-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/404.js?export=default */ "./src/pages/404.js?export=default")),
   "component---src-pages-components-js": () => __webpack_require__.e(/*! import() | component---src-pages-components-js */ "component---src-pages-components-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/components.js?export=default */ "./src/pages/components.js?export=default")),
-  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=default */ "./src/pages/index.js?export=default"))
+  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js?export=default */ "./src/pages/index.js?export=default")),
+  "component---src-pages-product-page-js": () => __webpack_require__.e(/*! import() | component---src-pages-product-page-js */ "component---src-pages-product-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/product-page.js?export=default */ "./src/pages/product-page.js?export=default"))
 };
 
 exports.head = {
@@ -3914,14 +3915,14 @@ function onRenderBody({
   setHeadComponents([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("link", {
     key: "futura",
     rel: "preload",
-    href: "../static/fonts/Futura-Now-Headline.woff2",
+    href: "../../static/fonts/Futura-Now-Headline.woff2",
     as: "font",
     type: "font/woff2",
     crossOrigin: "anonymous"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("link", {
     key: "caslon-regular",
     rel: "preload",
-    href: "../static/fonts/Caslon-540-Italic.woff",
+    href: "../../static/fonts/Caslon-540-Italic.woff",
     as: "font",
     type: "font/woff",
     crossOrigin: "anonymous"
@@ -10223,24 +10224,24 @@ if (false) {} else {
 /***/ }),
 
 /***/ "react-dom/server":
-/*!**************************************************************************************************************************!*\
-  !*** external "C:\\Users\\uvita\\OneDrive\\Documentos\\repos\\royal-flower-website\\node_modules\\react-dom\\server.js" ***!
-  \**************************************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** external "C:\\Users\\dagobah\\Documents\\Repos\\royal-flower-website\\node_modules\\react-dom\\server.js" ***!
+  \*****************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\uvita\\OneDrive\\Documentos\\repos\\royal-flower-website\\node_modules\\react-dom\\server.js");
+module.exports = require("C:\\Users\\dagobah\\Documents\\Repos\\royal-flower-website\\node_modules\\react-dom\\server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!*********************************************************************************************************************!*\
-  !*** external "C:\\Users\\uvita\\OneDrive\\Documentos\\repos\\royal-flower-website\\node_modules\\react\\index.js" ***!
-  \*********************************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** external "C:\\Users\\dagobah\\Documents\\Repos\\royal-flower-website\\node_modules\\react\\index.js" ***!
+  \************************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\uvita\\OneDrive\\Documentos\\repos\\royal-flower-website\\node_modules\\react\\index.js");
+module.exports = require("C:\\Users\\dagobah\\Documents\\Repos\\royal-flower-website\\node_modules\\react\\index.js");
 
 /***/ }),
 

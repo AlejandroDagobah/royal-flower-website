@@ -245,6 +245,34 @@ var IconSearch = (0,_createReactComponent_js__WEBPACK_IMPORTED_MODULE_0__["defau
 
 /***/ }),
 
+/***/ "./node_modules/@tabler/icons-react/dist/esm/icons/IconX.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@tabler/icons-react/dist/esm/icons/IconX.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ IconX)
+/* harmony export */ });
+/* harmony import */ var _createReactComponent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../createReactComponent.js */ "./node_modules/@tabler/icons-react/dist/esm/createReactComponent.js");
+/**
+ * @tabler/icons-react v2.47.0 - MIT
+ */
+
+
+
+var IconX = (0,_createReactComponent_js__WEBPACK_IMPORTED_MODULE_0__["default"])("x", "IconX", [
+  ["path", { d: "M18 6l-12 12", key: "svg-0" }],
+  ["path", { d: "M6 6l12 12", key: "svg-1" }]
+]);
+
+
+//# sourceMappingURL=IconX.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/camelcase/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/camelcase/index.js ***!
@@ -1082,14 +1110,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Footer() {
+function Footer(props) {
   const lines = _info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products.map(() => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "w-[1px] h-full bg-charcoal"
     });
   });
+  function Toggle() {
+    props.setVisible(prevState => !prevState);
+  }
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", {
-    className: "absolute bottom-0 z-10 w-full px-8 py-6"
+    className: "absolute bottom-0 z-0 w-full px-8 py-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-row justify-between px-[20px]"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
@@ -1100,17 +1131,94 @@ function Footer() {
     className: "uppercase"
   }, "Made in Ecuador"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
     className: "uppercase font-bold"
-  }, "Red Roses Collection"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Red Roses Collection")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "font-caslon text-5xl ml-20"
+  }, "0", props.number, "/0", _info_json__WEBPACK_IMPORTED_MODULE_1__.slider.quantity)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: " flex gap-5 justify-center"
   }, lines), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "#",
-    className: "py-2 px-2 border-2 aspect-square hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out"
+    className: "py-2 px-2 border aspect-square hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
     href: "#",
-    className: "px-6 py-2 border-2 uppercase hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out"
+    onClick: Toggle,
+    className: "px-6 py-2 border uppercase hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out"
   }, "Inquire for purchase"))));
+}
+
+/***/ }),
+
+/***/ "./src/components/form.jsx":
+/*!*********************************!*\
+  !*** ./src/components/form.jsx ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Form)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _info_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../info.json */ "./src/info.json");
+/* harmony import */ var gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-image */ "./node_modules/gatsby-plugin-image/dist/gatsby-image.module.js");
+/* harmony import */ var _tabler_icons_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @tabler/icons-react */ "./node_modules/@tabler/icons-react/dist/esm/icons/IconX.js");
+
+
+
+
+
+function Form(props) {
+  const inputs = _info_json__WEBPACK_IMPORTED_MODULE_1__.form.inputs.map(item => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+      type: "text",
+      className: "w-full bg-charcoal capitalize placeholder:text-cream/50 border-b border-cream/50 focus:border-cream/100 rounded-none focus:outline-none transition-all duration-150 ease-in-our",
+      placeholder: item.placeholder
+    });
+  });
+  function Toggle() {
+    props.setVisible(prevState => !prevState);
+  }
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: `overflow-x-none h-full absolute top-0 right-0 w-[30vw] min-w-[400px] bg-charcoal z-30 text-cream flex flex-col justify-center px-16 transition-all duration-400 translate-x-[40vw] ${props.visible ? 'translate-x-[0vw]' : 'translate-x-[40vw]'}`
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "self-end -mr-2 mb-4 cursor-pointer",
+    onClick: Toggle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 40,
+    stroke: 1
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "border-2 border-cream w-[100%] h-[700px] flex flex-col justify-between"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "flex h-[60px] border-b-2 border-cream"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "flex flex-1  items-center px-6 border-r-2 border-cream"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "REQUEST FOR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "aspect-square h-[60px] p-2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
+    className: "w-full h-full max-w-[60px]",
+    placeholder: "color",
+    src: "../images/icon-alter.png",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/799673234.json */ "./.cache/caches/gatsby-plugin-image/799673234.json")
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "px-10"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    className: "uppercase"
+  }, "Rose"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "uppercase font-bold"
+  }, "Black Magic")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "flex flex-col gap-4 mt-8"
+  }, inputs, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "#",
+    className: "text-center pt-2 pb-3 mt-4 border border-cream/50 uppercase text-cream hover:bg-cream hover:text-charcoal transition-all duration-200 ease-in-out  align-middle"
+  }, "SUBMIT")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "flex w-full justify-between py-4 px-4 items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "uppercase font-bold align-baseline"
+  }, "Royal Flowers"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "font-caslon align-baseline mt-[6px] text-md"
+  }, "Made in Ecuador"))));
 }
 
 /***/ }),
@@ -1141,18 +1249,18 @@ function Header() {
   const menuLeft = _info_json__WEBPACK_IMPORTED_MODULE_1__.header.menuLeft.map(item => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: item.url,
-      className: "uppercase mt-[4px] no-underline hover:underline underline-offset-8"
+      className: "uppercase no-underline hover:underline underline-offset-8"
     }, item.value);
   });
   const menuRight = _info_json__WEBPACK_IMPORTED_MODULE_1__.header.menuRight.map(item => {
     console.log(item);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_2__.Link, {
       to: item.url,
-      className: "uppercase mt-[4px] no-underline hover:underline underline-offset-8"
+      className: "uppercase no-underline hover:underline underline-offset-8"
     }, item.value);
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
-    className: "w-[100%] z-10 bg-cream fixed"
+    className: "w-[100%] z-20 bg-cream fixed"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-row justify-between py-3 px-[20px] border-b border-charcoal lg:hidden"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1164,18 +1272,18 @@ function Header() {
     className: "max-w-[180px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/logo-royal-flower.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/4190835440.json */ "./.cache/caches/gatsby-plugin-image/4190835440.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2069002092.json */ "./.cache/caches/gatsby-plugin-image/2069002092.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
     className: "max-w-[26px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/icon-royal-flowers.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/638299874.json */ "./.cache/caches/gatsby-plugin-image/638299874.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1316077417.json */ "./.cache/caches/gatsby-plugin-image/1316077417.json")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
     stroke: 1
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "flex flex-row justify-between py-3 px-[20px] border-b border-charcoal hidden lg:flex"
+    className: "flex flex-row justify-between py-2 px-[20px] border-b border-charcoal hidden lg:flex"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 items-center"
   }, menuLeft), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1187,23 +1295,23 @@ function Header() {
     className: "max-w-[180px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/logo-royal-flower.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/4190835440.json */ "./.cache/caches/gatsby-plugin-image/4190835440.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2069002092.json */ "./.cache/caches/gatsby-plugin-image/2069002092.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, menuRight, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
     className: "max-w-[26px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/icon-royal-flowers.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/638299874.json */ "./.cache/caches/gatsby-plugin-image/638299874.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1316077417.json */ "./.cache/caches/gatsby-plugin-image/1316077417.json")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
     stroke: 1
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "flex flex-row py-3 px-[20px] border-b border-charcoal gap-3"
+    className: "flex flex-row py-[1vh] px-[20px] border-b border-charcoal gap-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_5__["default"], {
     className: "mt-[1px] align-middle"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "text",
-    className: "mt-[4px] w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none",
+    className: "w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none",
     placeholder: _info_json__WEBPACK_IMPORTED_MODULE_1__.header.searchBar.text
   })));
 }
@@ -1224,6 +1332,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _info_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../info.json */ "./src/info.json");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form */ "./src/components/form.jsx");
+
 
 
 
@@ -1231,17 +1341,17 @@ __webpack_require__.r(__webpack_exports__);
 function ProductCard(props) {
   const [isOver, setIsOver] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "w-[15vw] min-w-[250px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125",
+    className: "w-[15vw] min-w-[200px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer",
     key: props.index,
     id: props.index,
     onMouseOver: () => setIsOver(true),
     onMouseLeave: () => setIsOver(false)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: props.image,
+    src: ".../static/BLACK_MAGIC-1.png",
     alt: "",
     className: "object-contain"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", {
-    className: `uppercase underline underline-offset-[13px] w-full text-center pt-8 transition-all ease-in-out duration-300 ${isOver ? 'opacity-100' : 'opacity-0'}`
+    className: `uppercase text-sm underline underline-offset-[13px] w-full text-center pt-4 transition-all ease-in-out duration-300 ${isOver ? 'opacity-100' : 'opacity-0'}`
   }, props.title));
 }
 
@@ -1269,7 +1379,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Slider() {
+function Slider(props) {
+  const [currentNumber, setCurrentNumber] = react__WEBPACK_IMPORTED_MODULE_0__.useState(1);
   const [productList, setProductList] = react__WEBPACK_IMPORTED_MODULE_0__.useState([..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products, ..._info_json__WEBPACK_IMPORTED_MODULE_1__.slider.products]);
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
     let move = 1;
@@ -1287,7 +1398,7 @@ function Slider() {
       // producto.style.transform = `translate(${producto.offsetWidth*5+(gap*5)+move}px, 0px)`
     });
 
-    slider.addEventListener('mousewheel', e => {
+    slider.addEventListener('wheel', e => {
       e.preventDefault();
       slider.scrollLeft += e.deltaY;
 
@@ -1324,6 +1435,20 @@ function Slider() {
 
       // fifthElement.style.border = "solid 2px green"
     });
+
+    // slider.addEventListener('wheel', (e)=>{
+    //     e.preventDefault()
+
+    //     if(currentNumber < 5){
+
+    //         setCurrentNumber((prevState)=>prevState+1)
+
+    //     }else{
+    //         setCurrentNumber(1)
+
+    //     }
+
+    // })
 
     // function isOutOfView(container, element) {
 
@@ -1414,9 +1539,9 @@ function Slider() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "h-[100vh] w-full relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "w-full h-full grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap",
+    className: "w-full h-full scroll-smooth grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap",
     id: "product-slider"
-  }, products), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  }, products));
 }
 
 /***/ }),
@@ -1436,11 +1561,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header */ "./src/components/header.jsx");
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/slider */ "./src/components/slider.jsx");
 /* harmony import */ var _info_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../info.json */ "./src/info.json");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/dom/scroll/index.mjs");
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/animation/animate.mjs");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/dom/motion.mjs");
-/* harmony import */ var _tabler_icons_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @tabler/icons-react */ "./node_modules/@tabler/icons-react/dist/esm/icons/IconMouse.js");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/dom/scroll/index.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/dom/motion.mjs");
+/* harmony import */ var _tabler_icons_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tabler/icons-react */ "./node_modules/@tabler/icons-react/dist/esm/icons/IconMouse.js");
 /* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/footer */ "./src/components/footer.jsx");
+/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/form */ "./src/components/form.jsx");
+
 
 
 
@@ -1449,26 +1576,66 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function IndexPage() {
+  const [visible, setVisible] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
+  const [currentNumber, setCurrentNumber] = react__WEBPACK_IMPORTED_MODULE_0__.useState(1);
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
     const hero = document.getElementById('hero-video');
+    let movement = 1;
+    function moveHero() {
+
+      // e.preventDefault()
+
+      // console.log(e);
+
+      // // movement += e.pageY * 0.01
+
+      // // if(e.deltaY < 0){
+
+      // //   hero.style.transform = `translate(0px, ${movement}px)`
+      // // }else{
+      // //   hero.style.transform = `translate(0px, -${movement}px)`
+
+      // // }
+      // console.log(movement);
+    }
+    let boolWheel = false;
+    document.addEventListener('wheel', () => {
+      if (boolWheel === false) {
+        (0,framer_motion__WEBPACK_IMPORTED_MODULE_6__.animate)(hero, {
+          transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'],
+          opacity: [100, 100]
+        }, {
+          duration: 1.5
+        }, {
+          type: 'spring'
+        });
+        boolWheel = true;
+      }
+    });
+
+    // document.removeEventListener('wheel', moveHero(hero))
 
     // transform: ["none", "translateY(-100%)"],
-    (0,framer_motion__WEBPACK_IMPORTED_MODULE_5__.scroll)((0,framer_motion__WEBPACK_IMPORTED_MODULE_6__.animate)(hero, {
+    (0,framer_motion__WEBPACK_IMPORTED_MODULE_7__.scroll)((0,framer_motion__WEBPACK_IMPORTED_MODULE_6__.animate)(hero, {
       opacity: [100, 0]
     }, {
       duration: 1
     }));
   });
+  console.log(visible);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", {
-    className: "flex flex-col"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
-    className: "overflow-hidden t-0 l-0 min-w-[100%] min-h-[100vh] h-[100vh] bg-charcoal relative",
+    className: "flex flex-col relative"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_form__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    visible: visible,
+    setVisible: setVisible
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
+    className: "overflow-hidden top-0 left-0 min-w-[100%] min-h-[100vh] h-[100vh] bg-charcoal z-10 absolute transition-all",
     id: "hero-video"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "z-10 w-full absolute bottom-0 pb-[10vh]"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-col justify-center items-center gap-5"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
     className: "cream",
     color: "#F6F5F2",
     size: 50,
@@ -1481,9 +1648,12 @@ function IndexPage() {
     loop: true,
     className: "min-h-[100vh] min-w-[100%] opacity-60 z-0 absolute"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("source", {
-    src: "/static/homepage-hero-video.mp4",
+    src: '../../static/home-page-hero-video.mp4',
     type: "video/mp4"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_slider__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_slider__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    number: currentNumber,
+    setVisible: setVisible
+  }));
 }
 
 /***/ }),
@@ -16647,9 +16817,19 @@ function resolveMotionValue(value) {
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/4190835440.json":
+/***/ "./.cache/caches/gatsby-plugin-image/1316077417.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/4190835440.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/1316077417.json ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png","srcSet":"/static/37c34565eee31294c1925730acd3962f/8171b/icon-royal-flowers.png 13w,\\n/static/37c34565eee31294c1925730acd3962f/50704/icon-royal-flowers.png 26w,\\n/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png 52w","sizes":"(min-width: 52px) 52px, 100vw"},"sources":[{"srcSet":"/static/37c34565eee31294c1925730acd3962f/74a40/icon-royal-flowers.webp 13w,\\n/static/37c34565eee31294c1925730acd3962f/0d336/icon-royal-flowers.webp 26w,\\n/static/37c34565eee31294c1925730acd3962f/6a337/icon-royal-flowers.webp 52w","type":"image/webp","sizes":"(min-width: 52px) 52px, 100vw"}]},"width":52,"height":55}');
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/2069002092.json":
+/*!***********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/2069002092.json ***!
   \***********************************************************/
 /***/ ((module) => {
 
@@ -16657,13 +16837,13 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/638299874.json":
+/***/ "./.cache/caches/gatsby-plugin-image/799673234.json":
 /*!**********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/638299874.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/799673234.json ***!
   \**********************************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png","srcSet":"/static/37c34565eee31294c1925730acd3962f/8171b/icon-royal-flowers.png 13w,\\n/static/37c34565eee31294c1925730acd3962f/50704/icon-royal-flowers.png 26w,\\n/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png 52w","sizes":"(min-width: 52px) 52px, 100vw"},"sources":[{"srcSet":"/static/37c34565eee31294c1925730acd3962f/74a40/icon-royal-flowers.webp 13w,\\n/static/37c34565eee31294c1925730acd3962f/0d336/icon-royal-flowers.webp 26w,\\n/static/37c34565eee31294c1925730acd3962f/6a337/icon-royal-flowers.webp 52w","type":"image/webp","sizes":"(min-width: 52px) 52px, 100vw"}]},"width":52,"height":55}');
+module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png","srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/f1c6c/icon-alter.png 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/80d5c/icon-alter.png 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png 108w","sizes":"(min-width: 108px) 108px, 100vw"},"sources":[{"srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/391be/icon-alter.webp 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/284f9/icon-alter.webp 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/4a845/icon-alter.webp 108w","type":"image/webp","sizes":"(min-width: 108px) 108px, 100vw"}]},"width":108,"height":109}');
 
 /***/ }),
 
@@ -16673,7 +16853,7 @@ module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src"
   \***********************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"header":{"menuLeft":[{"value":"Roses","url":""},{"value":"Garden Roses","url":""},{"value":"Spray Roses","url":""},{"value":"Summer Flowers","url":""}],"menuRight":[{"value":"About","url":""},{"value":"Blog","url":""},{"value":"Contact","url":""}],"searchBar":{"text":"What are you looking for?"}},"hero":{"text":"Discover our collection"},"slider":{"quantity":5,"products":[{"url":"#","image":"/static/BLACK_MAGIC-1.png","title":"Black Magic"},{"url":"#","image":"/static/CHERRY-LOVE-1.png","title":"Cherry Love"},{"url":"#","image":"/static/EXPLORER-1.png","title":"Explorer"},{"url":"#","image":"/static/FREEDOM-1.png","title":"Freedom"},{"url":"#","image":"/static/RED-PANTHER-1.png","title":"Red Panther"}]}}');
+module.exports = JSON.parse('{"header":{"menuLeft":[{"value":"Roses","url":""},{"value":"Garden Roses","url":""},{"value":"Spray Roses","url":""},{"value":"Summer Flowers","url":""}],"menuRight":[{"value":"About","url":""},{"value":"Blog","url":""},{"value":"Contact","url":""}],"searchBar":{"text":"What are you looking for?"}},"hero":{"text":"Discover our collection"},"slider":{"quantity":5,"products":[{"url":"#","image":"../../images/BLACK_MAGIC-1.png","title":"Black Magic"},{"url":"#","image":"../images/CHERRY-LOVE-1.png","title":"Cherry Love"},{"url":"#","image":"../images/EXPLORER-1.png","title":"Explorer"},{"url":"#","image":"../images/FREEDOM-1.png","title":"Freedom"},{"url":"#","image":"../images/RED-PANTHER-1.png","title":"Red Panther"}]},"productPage":{"images":["/static/BLACK_MAGIC-1.png","/static/BLACK_MAGIC-1.png","/static/BLACK_MAGIC-1.png"],"title":"Black Magic","description":"A bewitching floral enchantment that commands attention with its deep, velvety allure. Each petal is a dark symphony, an exquisite play of shades ranging from velvety burgundy to rich, almost black tones. This captivating rose exudes an air of mystery and sophistication, making it a symbol of timeless elegance and dramatic beauty.","features":[{"field":"Color","value":"red"},{"field":"Head Size","value":"7 cm"},{"field":"Length","value":"50cm - 80cm"},{"field":"Vase Life","value":"15 Days"}]},"form":{"inputs":[{"placeholder":"Name"},{"placeholder":"Email"},{"placeholder":"Phone N."},{"placeholder":"Country, City"},{"placeholder":"Quantity Required"}]}}');
 
 /***/ })
 

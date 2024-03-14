@@ -11,7 +11,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('../static/fonts/Caslon-540-Italic.woff') format('woff');
+        src: url('../../static/fonts/Caslon-540-Italic.woff') format('woff');
     }
     
     @font-face {
@@ -19,7 +19,7 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url('../static/fonts/Futura-Now-Headline.woff2') format('woff2');
+        src: url('../../static/fonts/Futura-Now-Headline.woff2') format('woff2');
     }
     
     @font-face {
@@ -27,7 +27,7 @@
         font-style: bold;
         font-weight: 600;
         font-display: swap;
-        src: url('../static/fonts/Futura-Now-Headline-Medium.woff2') format('woff2');
+        src: url('../../static/fonts/Futura-Now-Headline-Medium.woff2') format('woff2');
     }
 
     /* @font-face {
@@ -47,7 +47,8 @@
     }
  */
     body{
-        @apply bg-cream
+        @apply bg-cream;
+        overflow-x: hidden
     }
 
     * {

@@ -8,9 +8,11 @@ import { animate, motion, scroll } from "framer-motion"
 import { IconMouse } from "@tabler/icons-react"
 
 import Footer from "../components/footer"
-
+import Form from "../components/form"
 
 export default function IndexPage(){
+  const [visible, setVisible] = React.useState(false)
+  const [currentNumber, setCurrentNumber] = React.useState(1)
 
   React.useEffect(()=>{
 
@@ -62,9 +64,12 @@ export default function IndexPage(){
   })
   
 
+  console.log(visible);
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col relative">
+
+      <Form visible={visible} setVisible={setVisible}/>
       <Header/>
 
 
@@ -80,12 +85,15 @@ export default function IndexPage(){
           </div>
         </div>
         <video autoPlay muted loop className="min-h-[100vh] min-w-[100%] opacity-60 z-0 absolute">
-          <source src="/static/homepage-hero-video.mp4" type="video/mp4"/>
+          <source src={'../../static/home-page-hero-video.mp4'} type="video/mp4"/>
         </video>
 
       </motion.div>
 
       <Slider/>
+
+      <Footer number={currentNumber} setVisible={setVisible}/>
+
       
     </main>
   )

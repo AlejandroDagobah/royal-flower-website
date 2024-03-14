@@ -6,7 +6,10 @@ import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import ProductCard from './product-card'
 import Footer from './footer'
 
-export default function Slider(){
+export default function Slider(props){
+
+    const [currentNumber, setCurrentNumber] = React.useState(1)
+
 
     const [productList, setProductList] = React.useState([...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products])
 
@@ -35,9 +38,13 @@ export default function Slider(){
 
         })
         
-        slider.addEventListener('mousewheel', (e)=>{
+        slider.addEventListener('wheel', (e)=>{
             e.preventDefault()
+      
+
             slider.scrollLeft += e.deltaY;
+
+          
 
 
             // move += (e.deltaY * 0.4)
@@ -79,6 +86,21 @@ export default function Slider(){
     
 
         })
+
+        // slider.addEventListener('wheel', (e)=>{
+        //     e.preventDefault()
+            
+        //     if(currentNumber < 5){
+
+        //         setCurrentNumber((prevState)=>prevState+1)
+
+        //     }else{
+        //         setCurrentNumber(1)
+
+        //     }
+               
+
+        // })
         
         
 
@@ -180,11 +202,9 @@ export default function Slider(){
     return(
         <div className='h-[100vh] w-full relative'>
             
-            <div className="w-full h-full grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap" id='product-slider'>
+            <div className="w-full h-full scroll-smooth grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap" id='product-slider'>
                 {products}
             </div>
-
-            <Footer/>
 
         </div>
 

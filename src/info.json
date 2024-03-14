@@ -21,11 +21,31 @@
     "slider":{
         "quantity": 5,
         "products": [
-            {"url": "#", "image": "/static/BLACK_MAGIC-1.png", "title": "Black Magic"},
-            {"url": "#", "image": "/static/CHERRY-LOVE-1.png", "title": "Cherry Love"},
-            {"url": "#", "image": "/static/EXPLORER-1.png", "title": "Explorer"},
-            {"url": "#", "image": "/static/FREEDOM-1.png", "title": "Freedom"},
-            {"url": "#", "image": "/static/RED-PANTHER-1.png", "title": "Red Panther"}
+            {"url": "#", "image": "../../images/BLACK_MAGIC-1.png", "title": "Black Magic"},
+            {"url": "#", "image": "../images/CHERRY-LOVE-1.png", "title": "Cherry Love"},
+            {"url": "#", "image": "../images/EXPLORER-1.png", "title": "Explorer"},
+            {"url": "#", "image": "../images/FREEDOM-1.png", "title": "Freedom"},
+            {"url": "#", "image": "../images/RED-PANTHER-1.png", "title": "Red Panther"}
+        ]
+    },
+    "productPage":{
+        "images": ["/static/BLACK_MAGIC-1.png", "/static/BLACK_MAGIC-1.png", "/static/BLACK_MAGIC-1.png"],
+        "title": "Black Magic",
+        "description": "A bewitching floral enchantment that commands attention with its deep, velvety allure. Each petal is a dark symphony, an exquisite play of shades ranging from velvety burgundy to rich, almost black tones. This captivating rose exudes an air of mystery and sophistication, making it a symbol of timeless elegance and dramatic beauty.", 
+        "features": [
+            {"field": "Color", "value": "red"},
+            {"field": "Head Size", "value": "7 cm"},
+            {"field": "Length", "value": "50cm - 80cm"},
+            {"field": "Vase Life", "value": "15 Days"}
+        ]
+    },
+    "form":{
+        "inputs":[
+            {"placeholder":"Name"},
+            {"placeholder":"Email"},
+            {"placeholder":"Phone N."},
+            {"placeholder":"Country, City"},
+            {"placeholder":"Quantity Required"}
         ]
     }
 }
