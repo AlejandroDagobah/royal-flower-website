@@ -195,7 +195,7 @@ export default function Slider(props){
     const products = productList.map((product, index)=>{
         
         return(
-            <ProductCard image={product.image} title={product.title} index={index}/>
+            <ProductCard image={product.image} size={15} title={product.title} index={index}/>
         )
     })
 

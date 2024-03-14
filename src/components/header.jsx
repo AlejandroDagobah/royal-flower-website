@@ -3,7 +3,7 @@ import info from '../info.json'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
-
+import { navigate } from 'gatsby'
 export default function Header() {
 
     const menuLeft = info.header.menuLeft.map((item)=>{
@@ -43,7 +43,7 @@ export default function Header() {
                 <nav className='flex-1 flex flex-row gap-4 items-center'>
                     {menuLeft}
                 </nav>
-                <div className=' flex justify-center' style={{height: "100%"}}>
+                <div onClick={()=>{navigate("/")}} className='cursor-pointer flex justify-center' style={{height: "100%"}}>
                     <StaticImage className='max-w-[180px] bg-cover my-auto' placeholder="color" src='../images/logo-royal-flower.png'/>
                 </div>
                 <nav className='flex-1 flex flex-row gap-4 justify-end items-center'>

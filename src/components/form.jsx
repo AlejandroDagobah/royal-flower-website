@@ -18,7 +18,7 @@ export default function Form(props){
     }
 
     return (
-        <div className={`overflow-x-none h-full absolute top-0 right-0 w-[30vw] min-w-[400px] bg-charcoal z-30 text-cream flex flex-col justify-center px-16 transition-all duration-400 translate-x-[40vw] ${props.visible ? 'translate-x-[0vw]' : 'translate-x-[40vw]'}`}>
+        <div className={`overflow-x-none h-full absolute top-0 right-0 w-[30vw] min-w-[400px] bg-charcoal z-30 text-cream flex flex-col justify-center px-16 transition-all duration-400 translate-x-[0vw] ${props.visible ? 'translate-x-[40vw]' : 'translate-x-[0vw]'}`}>
                 <div className='self-end -mr-2 mb-4 cursor-pointer' onClick={Toggle}>
                     <IconX size={40} stroke={1}/>
                 </div>

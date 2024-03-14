@@ -3,7 +3,7 @@ import * as React from "react"
 import Header from '../components/header'
 import info from "../info.json"
 import Form from "../components/form";
-
+import ProductCard from "../components/product-card";
 export default function ProductPage() {
 
     const [visible, setVisible] = React.useState(false)
@@ -24,7 +24,7 @@ export default function ProductPage() {
 
     const images = info.productPage.images.map((image)=>{
         return (
-            <img src={image} alt="" />
+            <ProductCard image={image} size={25} />
         )
     })
 
@@ -42,10 +42,22 @@ export default function ProductPage() {
             <Form visible={visible} setVisible={setVisible}/>
 
             <div className="flex items-center w-full h-[100vh]">
-                <div className="flex flex-col -mx-10 flex-1 ">
-                    {/* {images} */}
+                <div className="flex flex-col -mx-10 flex-1 gap-6">
+                    <div className="flex flex-row justify-center items-center">
 
-                    <div className=' flex gap-5 justify-center h-[50px]'>
+                    <div className={`flex-1 min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
+                        <img src={info.productPage.images[0]} alt="" className='object-contain'/>
+                    </div>
+                    <div className={`flex-1 min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`}>
+                        <img src={info.productPage.images[1]} alt="" className='object-contain'/>
+                    </div>
+                    <div className={`flex-1 min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
+                        <img src={info.productPage.images[2]} alt="" className='object-contain'/>
+                    </div>
+                  
+                   
+                    </div>
+                    <div className=' flex gap-5 justify-center h-[50px] mt-16'>
                         {lines}
                     </div>
 

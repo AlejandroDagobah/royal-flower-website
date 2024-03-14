@@ -34,8 +34,8 @@ export default function Footer(props){
                     {lines}
                 </div>
                 <nav className='flex-1 flex flex-row gap-4 justify-end items-center'>
-                    <a href="#" className='py-2 px-2 border aspect-square hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out'><IconBook/></a>
-                    <a href="#" onClick={Toggle} className='px-6 py-2 border uppercase hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out'>Inquire for purchase</a>
+                    <button className='py-2 px-2 border aspect-square hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out'><IconBook/></button>
+                    <button onClick={Toggle} className='px-6 py-2 border uppercase hover:bg-charcoal hover:text-cream transition-all duration-200 ease-in-out'>Inquire for purchase</button>
 
                 </nav>
             </div>
