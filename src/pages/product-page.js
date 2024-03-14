@@ -4,6 +4,7 @@ import Header from '../components/header'
 import info from "../info.json"
 import Form from "../components/form";
 import ProductCard from "../components/product-card";
+import { StaticImage } from "gatsby-plugin-image";
 export default function ProductPage() {
 
     const [visible, setVisible] = React.useState(false)
@@ -46,13 +47,13 @@ export default function ProductPage() {
                     <div className="flex flex-row justify-center items-center">
 
                         <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
-                            <img src={info.productPage.images[0]} alt="" className='object-contain'/>
+                            <StaticImage src={'../images/BLACK_MAGIC-4.png'} alt="" className='object-contain'/>
                         </div>
                         <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`}>
-                            <img src={info.productPage.images[1]} alt="" className='object-contain'/>
+                            <StaticImage src={'../images/BLACK_MAGIC-2.png'} alt="" className='object-contain'/>
                         </div>
                         <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
-                            <img src={info.productPage.images[2]} alt="" className='object-contain'/>
+                            <StaticImage src={'../images/BLACK_MAGIC-3.png'} alt="" className='object-contain'/>
                         </div>
                   
                    
