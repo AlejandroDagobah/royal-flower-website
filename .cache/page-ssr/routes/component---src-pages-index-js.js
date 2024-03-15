@@ -1201,7 +1201,7 @@ function Form(props) {
     className: "w-full h-full max-w-[60px]",
     placeholder: "color",
     src: "../images/icon-alter.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/799673234.json */ "./.cache/caches/gatsby-plugin-image/799673234.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1219311970.json */ "./.cache/caches/gatsby-plugin-image/1219311970.json")
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "px-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
@@ -1273,14 +1273,14 @@ function Header() {
     className: "max-w-[180px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/logo-royal-flower.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2069002092.json */ "./.cache/caches/gatsby-plugin-image/2069002092.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3850885250.json */ "./.cache/caches/gatsby-plugin-image/3850885250.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
     className: "max-w-[26px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/icon-royal-flowers.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1316077417.json */ "./.cache/caches/gatsby-plugin-image/1316077417.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/287278811.json */ "./.cache/caches/gatsby-plugin-image/287278811.json")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
     stroke: 1
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1299,14 +1299,14 @@ function Header() {
     className: "max-w-[180px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/logo-royal-flower.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2069002092.json */ "./.cache/caches/gatsby-plugin-image/2069002092.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3850885250.json */ "./.cache/caches/gatsby-plugin-image/3850885250.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, menuRight, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
     className: "max-w-[26px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/icon-royal-flowers.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1316077417.json */ "./.cache/caches/gatsby-plugin-image/1316077417.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/287278811.json */ "./.cache/caches/gatsby-plugin-image/287278811.json")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
     stroke: 1
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1406,7 +1406,7 @@ function Slider(props) {
       // producto.style.transform = `translate(${producto.offsetWidth*5+(gap*5)+move}px, 0px)`
     });
 
-    slider.addEventListener('wheel', e => {
+    slider.addEventListener('mousewheel', e => {
       e.preventDefault();
       slider.scrollLeft += e.deltaY;
 
@@ -1453,32 +1453,38 @@ function Slider(props) {
       // maximum time allowed to travel that distance
       elapsedTime,
       startTime;
-    slider.addEventListener('touchstart', function (e) {
-      var touchobj = e.changedTouches[0];
-      dist = 0;
-      startX = touchobj.pageX;
-      startY = touchobj.pageY;
-      startTime = new Date().getTime(); // record time when finger first makes contact with surface
-      e.preventDefault();
-    }, false);
-    slider.addEventListener('touchmove', function (e) {
-      e.preventDefault(); // prevent scrolling when inside DIV
-    }, false);
-    slider.addEventListener('touchend', function (e) {
-      var touchobj = e.changedTouches[0];
-      dist = touchobj.pageX - startX; // get total dist traveled by finger while in contact with surface
 
-      console.log(touchobj.pageX * -1, touchobj.pageX);
-      if (touchobj.pageX > startX) {
-        slider.scrollLeft += touchobj.pageX * -1;
-        console.log("FUE HACIA LA IZQ");
-      }
-      if (touchobj.pageX < startX) {
-        slider.scrollLeft += touchobj.pageX * 1;
-        console.log("FUE HACIA LA DER");
-      }
-      e.preventDefault();
-    }, false);
+    // slider.addEventListener('touchstart', function(e){
+    //     var touchobj = e.changedTouches[0]
+    //     dist = 0
+    //     startX = touchobj.pageX
+    //     startY = touchobj.pageY
+    //     startTime = new Date().getTime() // record time when finger first makes contact with surface
+    //     e.preventDefault()
+    // }, false)
+
+    // slider.addEventListener('touchmove', function(e){
+    //     e.preventDefault() // prevent scrolling when inside DIV
+    // }, false)
+
+    // slider.addEventListener('touchend', function(e){
+    //     var touchobj = e.changedTouches[0]
+    //     dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
+
+    //     console.log((touchobj.pageX*(-1)), touchobj.pageX);
+
+    //     if( touchobj.pageX > startX){
+    //         slider.scrollLeft += (touchobj.pageX*(-1))
+    //         console.log("FUE HACIA LA IZQ");
+    //     }
+    //     if(touchobj.pageX < startX){
+    //         slider.scrollLeft += (touchobj.pageX*(1))
+    //         console.log("FUE HACIA LA DER");
+
+    //     }
+
+    //     e.preventDefault()
+    // }, false)
 
     // slider.addEventListener('wheel', (e)=>{
     //     e.preventDefault()
@@ -1584,7 +1590,7 @@ function Slider(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "h-[100vh] w-full relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "w-full h-full scroll-smooth grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap",
+    className: "w-full h-full grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap",
     id: "product-slider"
   }, products));
 }
@@ -16905,33 +16911,33 @@ function resolveMotionValue(value) {
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/1316077417.json":
+/***/ "./.cache/caches/gatsby-plugin-image/1219311970.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/1316077417.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/1219311970.json ***!
   \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png","srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/f1c6c/icon-alter.png 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/80d5c/icon-alter.png 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png 108w","sizes":"(min-width: 108px) 108px, 100vw"},"sources":[{"srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/391be/icon-alter.webp 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/284f9/icon-alter.webp 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/4a845/icon-alter.webp 108w","type":"image/webp","sizes":"(min-width: 108px) 108px, 100vw"}]},"width":108,"height":109}');
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/287278811.json":
+/*!**********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/287278811.json ***!
+  \**********************************************************/
 /***/ ((module) => {
 
 module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png","srcSet":"/static/37c34565eee31294c1925730acd3962f/8171b/icon-royal-flowers.png 13w,\\n/static/37c34565eee31294c1925730acd3962f/50704/icon-royal-flowers.png 26w,\\n/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png 52w","sizes":"(min-width: 52px) 52px, 100vw"},"sources":[{"srcSet":"/static/37c34565eee31294c1925730acd3962f/74a40/icon-royal-flowers.webp 13w,\\n/static/37c34565eee31294c1925730acd3962f/0d336/icon-royal-flowers.webp 26w,\\n/static/37c34565eee31294c1925730acd3962f/6a337/icon-royal-flowers.webp 52w","type":"image/webp","sizes":"(min-width: 52px) 52px, 100vw"}]},"width":52,"height":55}');
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/2069002092.json":
+/***/ "./.cache/caches/gatsby-plugin-image/3850885250.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/2069002092.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/3850885250.json ***!
   \***********************************************************/
 /***/ ((module) => {
 
 module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/c6a2525c548497900abc3c32b3143498/07f14/logo-royal-flower.png","srcSet":"/static/c6a2525c548497900abc3c32b3143498/6856d/logo-royal-flower.png 89w,\\n/static/c6a2525c548497900abc3c32b3143498/61254/logo-royal-flower.png 178w,\\n/static/c6a2525c548497900abc3c32b3143498/07f14/logo-royal-flower.png 355w","sizes":"(min-width: 355px) 355px, 100vw"},"sources":[{"srcSet":"/static/c6a2525c548497900abc3c32b3143498/4b9db/logo-royal-flower.webp 89w,\\n/static/c6a2525c548497900abc3c32b3143498/94d16/logo-royal-flower.webp 178w,\\n/static/c6a2525c548497900abc3c32b3143498/21b05/logo-royal-flower.webp 355w","type":"image/webp","sizes":"(min-width: 355px) 355px, 100vw"}]},"width":355,"height":55}');
-
-/***/ }),
-
-/***/ "./.cache/caches/gatsby-plugin-image/799673234.json":
-/*!**********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/799673234.json ***!
-  \**********************************************************/
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png","srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/f1c6c/icon-alter.png 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/80d5c/icon-alter.png 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png 108w","sizes":"(min-width: 108px) 108px, 100vw"},"sources":[{"srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/391be/icon-alter.webp 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/284f9/icon-alter.webp 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/4a845/icon-alter.webp 108w","type":"image/webp","sizes":"(min-width: 108px) 108px, 100vw"}]},"width":108,"height":109}');
 
 /***/ }),
 

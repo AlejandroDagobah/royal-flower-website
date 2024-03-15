@@ -42,28 +42,35 @@ export default function ProductPage() {
             <Header/>
             <Form visible={visible} setVisible={setVisible}/>
 
-            <div className="flex flex-col md:flex-row items-center w-full lg:h-[100vh]">
-                <div className="flex flex-col md:-mx-10 lg:flex-1 gap-6 mt-24">
+            <div className="flex flex-col md:flex-row items-center w-full lg:h-[100vh] px-20 gap-[5rem]">
+
+                <div className="flex flex-auto flex-col mt-24 max-w-[50vw]">
                     <div className="flex flex-row justify-center items-center">
 
-                        <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
-                            <StaticImage src={'../images/BLACK_MAGIC-4.png'} alt="" className='object-contain'/>
+                        {/* <div className={`snap-center duration-300 ease-in-out transition-all cursor-pointer z-0`}>
+                            <StaticImage src={'../images/black-magic-4.png'} alt="" className=''/>
                         </div>
-                        <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`}>
-                            <StaticImage src={'../images/BLACK_MAGIC-2.png'} alt="" className='object-contain'/>
+                        <div className={`shadow-md duration-300 ease-in-out transition-all z-10 cursor-pointer`}>
+                            <StaticImage src={'../images/black-magic-2.png'} alt="" className=''/>
                         </div>
-                        <div className={`flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`}>
-                            <StaticImage src={'../images/BLACK_MAGIC-3.png'} alt="" className='object-contain'/>
+                        <div className={`duration-300 ease-in-out transition-all cursor-pointer z-0`}>
+                            <StaticImage src={'../images/black-magic-3.png'} alt="" className=''/>
                         </div>
-                  
+                   */}
+
+                        <StaticImage src={'../images/black-magic-2.png'} alt="" className=''/>
+                        <StaticImage src={'../images/black-magic-1.png'} alt="" className='scale-125  z-10 shadow-sm'/>
+                        <StaticImage src={'../images/black-magic-4.png'} alt="" className=''/>
+
                    
                     </div>
-                    <div className=' flex gap-5 justify-center h-[50px] mt-16'>
+                    <div className=' flex gap-5 justify-center h-[50px] mt-32'>
                         {lines}
                     </div>
-
                 </div>
-                <div className="flex gap-6 flex-col w-full md:w-[50%] justify-center px-8 lg:px-40 mt-8 mb-14">
+
+
+                <div className="flex flex-col gap-6 w-full md:w-[100%] justify-center mt-8 mb-14">
                     <div>
                         <h1 className="font-bold uppercase mb-4 md:mb-8 w-full text-center">{info.productPage.title}</h1>
                         <p>{info.productPage.description}</p>

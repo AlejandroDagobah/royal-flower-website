@@ -1,22 +1,22 @@
 var plugins = [{
       name: 'gatsby-plugin-image',
-      plugin: require('C:/Users/dagobah/Documents/Repos/royal-flower-website/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
+      plugin: require('/Users/alehipo/Documents/Repositories/royal-flowers-website/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-sitemap',
-      plugin: require('C:/Users/dagobah/Documents/Repos/royal-flower-website/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
+      plugin: require('/Users/alehipo/Documents/Repositories/royal-flowers-website/node_modules/gatsby-plugin-sitemap/gatsby-ssr.js'),
       options: {"plugins":[],"output":"/","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('C:/Users/dagobah/Documents/Repos/royal-flower-website/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
+      plugin: require('/Users/alehipo/Documents/Repositories/royal-flowers-website/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
       options: {"plugins":[],"icon":"src/images/icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"53aa06cf17e4239d0dba6ffd09854e02"},
     },{
       name: 'default-site-plugin',
-      plugin: require('C:/Users/dagobah/Documents/Repos/royal-flower-website/gatsby-ssr.js'),
+      plugin: require('/Users/alehipo/Documents/Repositories/royal-flowers-website/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'partytown',
-      plugin: require('C:/Users/dagobah/Documents/Repos/royal-flower-website/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
+      plugin: require('/Users/alehipo/Documents/Repositories/royal-flowers-website/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
       options: {"plugins":[]},
     }]
 /* global plugins */

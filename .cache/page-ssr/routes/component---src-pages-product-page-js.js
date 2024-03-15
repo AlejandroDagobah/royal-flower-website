@@ -1077,7 +1077,7 @@ function Form(props) {
     className: "w-full h-full max-w-[60px]",
     placeholder: "color",
     src: "../images/icon-alter.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/799673234.json */ "./.cache/caches/gatsby-plugin-image/799673234.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1219311970.json */ "./.cache/caches/gatsby-plugin-image/1219311970.json")
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "px-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
@@ -1149,14 +1149,14 @@ function Header() {
     className: "max-w-[180px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/logo-royal-flower.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2069002092.json */ "./.cache/caches/gatsby-plugin-image/2069002092.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3850885250.json */ "./.cache/caches/gatsby-plugin-image/3850885250.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
     className: "max-w-[26px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/icon-royal-flowers.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1316077417.json */ "./.cache/caches/gatsby-plugin-image/1316077417.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/287278811.json */ "./.cache/caches/gatsby-plugin-image/287278811.json")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
     stroke: 1
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1175,14 +1175,14 @@ function Header() {
     className: "max-w-[180px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/logo-royal-flower.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/2069002092.json */ "./.cache/caches/gatsby-plugin-image/2069002092.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3850885250.json */ "./.cache/caches/gatsby-plugin-image/3850885250.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", {
     className: "flex-1 flex flex-row gap-4 justify-end items-center"
   }, menuRight, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_3__.StaticImage, {
     className: "max-w-[26px] bg-cover my-auto",
     placeholder: "color",
     src: "../images/icon-royal-flowers.png",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1316077417.json */ "./.cache/caches/gatsby-plugin-image/1316077417.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/287278811.json */ "./.cache/caches/gatsby-plugin-image/287278811.json")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tabler_icons_react__WEBPACK_IMPORTED_MODULE_4__["default"], {
     stroke: 1
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1293,36 +1293,30 @@ function ProductPage() {
     visible: visible,
     setVisible: setVisible
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "flex flex-col md:flex-row items-center w-full lg:h-[100vh]"
+    className: "flex flex-col md:flex-row items-center w-full lg:h-[100vh] px-20 gap-[5rem]"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "flex flex-col md:-mx-10 lg:flex-1 gap-6 mt-24"
+    className: "flex flex-auto flex-col mt-24 max-w-[50vw]"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex flex-row justify-center items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
-    src: '../images/BLACK_MAGIC-4.png',
+    src: '../images/black-magic-3.png',
     alt: "",
-    className: "object-contain",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3089707754.json */ "./.cache/caches/gatsby-plugin-image/3089707754.json")
+    className: "",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1480545087.json */ "./.cache/caches/gatsby-plugin-image/1480545087.json")
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
+    src: '../images/black-magic-3.png',
+    alt: "",
+    className: "",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1480545087.json */ "./.cache/caches/gatsby-plugin-image/1480545087.json")
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
+    src: '../images/black-magic-3.png',
+    alt: "",
+    className: "",
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1480545087.json */ "./.cache/caches/gatsby-plugin-image/1480545087.json")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-125  hover:scale-150 z-10 cursor-pointer`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
-    src: '../images/BLACK_MAGIC-2.png',
-    alt: "",
-    className: "object-contain",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/3230568205.json */ "./.cache/caches/gatsby-plugin-image/3230568205.json")
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: `flex-1 lg:min-w-[300px] snap-center duration-300 ease-in-out transition-all scale-100  hover:scale-125 cursor-pointer z-0`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby_plugin_image__WEBPACK_IMPORTED_MODULE_5__.StaticImage, {
-    src: '../images/BLACK_MAGIC-3.png',
-    alt: "",
-    className: "object-contain",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1951188072.json */ "./.cache/caches/gatsby-plugin-image/1951188072.json")
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: " flex gap-5 justify-center h-[50px] mt-16"
   }, lines)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "flex gap-6 flex-col w-full md:w-[50%] justify-center px-8 lg:px-40 mt-8 mb-14"
+    className: "flex flex-col gap-6 w-full md:w-[100%] justify-center mt-8 mb-14"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "font-bold uppercase mb-4 md:mb-8 w-full text-center"
   }, _info_json__WEBPACK_IMPORTED_MODULE_2__.productPage.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, _info_json__WEBPACK_IMPORTED_MODULE_2__.productPage.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1342,63 +1336,43 @@ function ProductPage() {
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/1316077417.json":
+/***/ "./.cache/caches/gatsby-plugin-image/1219311970.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/1316077417.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/1219311970.json ***!
   \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png","srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/f1c6c/icon-alter.png 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/80d5c/icon-alter.png 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png 108w","sizes":"(min-width: 108px) 108px, 100vw"},"sources":[{"srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/391be/icon-alter.webp 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/284f9/icon-alter.webp 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/4a845/icon-alter.webp 108w","type":"image/webp","sizes":"(min-width: 108px) 108px, 100vw"}]},"width":108,"height":109}');
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/1480545087.json":
+/*!***********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/1480545087.json ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/158956a0f1816b18c55299850dfcb408/367a3/black-magic-3.png","srcSet":"/static/158956a0f1816b18c55299850dfcb408/fdf69/black-magic-3.png 270w,\\n/static/158956a0f1816b18c55299850dfcb408/fbc2a/black-magic-3.png 540w,\\n/static/158956a0f1816b18c55299850dfcb408/367a3/black-magic-3.png 1080w","sizes":"(min-width: 1080px) 1080px, 100vw"},"sources":[{"srcSet":"/static/158956a0f1816b18c55299850dfcb408/25c8a/black-magic-3.webp 270w,\\n/static/158956a0f1816b18c55299850dfcb408/9d234/black-magic-3.webp 540w,\\n/static/158956a0f1816b18c55299850dfcb408/827cc/black-magic-3.webp 1080w","type":"image/webp","sizes":"(min-width: 1080px) 1080px, 100vw"}]},"width":1080,"height":1619}');
+
+/***/ }),
+
+/***/ "./.cache/caches/gatsby-plugin-image/287278811.json":
+/*!**********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/287278811.json ***!
+  \**********************************************************/
 /***/ ((module) => {
 
 module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png","srcSet":"/static/37c34565eee31294c1925730acd3962f/8171b/icon-royal-flowers.png 13w,\\n/static/37c34565eee31294c1925730acd3962f/50704/icon-royal-flowers.png 26w,\\n/static/37c34565eee31294c1925730acd3962f/484a7/icon-royal-flowers.png 52w","sizes":"(min-width: 52px) 52px, 100vw"},"sources":[{"srcSet":"/static/37c34565eee31294c1925730acd3962f/74a40/icon-royal-flowers.webp 13w,\\n/static/37c34565eee31294c1925730acd3962f/0d336/icon-royal-flowers.webp 26w,\\n/static/37c34565eee31294c1925730acd3962f/6a337/icon-royal-flowers.webp 52w","type":"image/webp","sizes":"(min-width: 52px) 52px, 100vw"}]},"width":52,"height":55}');
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/1951188072.json":
+/***/ "./.cache/caches/gatsby-plugin-image/3850885250.json":
 /*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/1951188072.json ***!
-  \***********************************************************/
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/e80b5fceb78a6942225a8d93b2f62234/c05e2/BLACK_MAGIC-3.png","srcSet":"/static/e80b5fceb78a6942225a8d93b2f62234/3e47a/BLACK_MAGIC-3.png 438w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/39b59/BLACK_MAGIC-3.png 876w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/c05e2/BLACK_MAGIC-3.png 1752w","sizes":"(min-width: 1752px) 1752px, 100vw"},"sources":[{"srcSet":"/static/e80b5fceb78a6942225a8d93b2f62234/4c6de/BLACK_MAGIC-3.webp 438w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/2b347/BLACK_MAGIC-3.webp 876w,\\n/static/e80b5fceb78a6942225a8d93b2f62234/e8274/BLACK_MAGIC-3.webp 1752w","type":"image/webp","sizes":"(min-width: 1752px) 1752px, 100vw"}]},"width":1752,"height":2628}');
-
-/***/ }),
-
-/***/ "./.cache/caches/gatsby-plugin-image/2069002092.json":
-/*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/2069002092.json ***!
+  !*** ./.cache/caches/gatsby-plugin-image/3850885250.json ***!
   \***********************************************************/
 /***/ ((module) => {
 
 module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/c6a2525c548497900abc3c32b3143498/07f14/logo-royal-flower.png","srcSet":"/static/c6a2525c548497900abc3c32b3143498/6856d/logo-royal-flower.png 89w,\\n/static/c6a2525c548497900abc3c32b3143498/61254/logo-royal-flower.png 178w,\\n/static/c6a2525c548497900abc3c32b3143498/07f14/logo-royal-flower.png 355w","sizes":"(min-width: 355px) 355px, 100vw"},"sources":[{"srcSet":"/static/c6a2525c548497900abc3c32b3143498/4b9db/logo-royal-flower.webp 89w,\\n/static/c6a2525c548497900abc3c32b3143498/94d16/logo-royal-flower.webp 178w,\\n/static/c6a2525c548497900abc3c32b3143498/21b05/logo-royal-flower.webp 355w","type":"image/webp","sizes":"(min-width: 355px) 355px, 100vw"}]},"width":355,"height":55}');
-
-/***/ }),
-
-/***/ "./.cache/caches/gatsby-plugin-image/3089707754.json":
-/*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/3089707754.json ***!
-  \***********************************************************/
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/1a41c03902ef056c6f871cbc382418f1/baacd/BLACK_MAGIC-4.png","srcSet":"/static/1a41c03902ef056c6f871cbc382418f1/d3d70/BLACK_MAGIC-4.png 407w,\\n/static/1a41c03902ef056c6f871cbc382418f1/ca2bc/BLACK_MAGIC-4.png 813w,\\n/static/1a41c03902ef056c6f871cbc382418f1/baacd/BLACK_MAGIC-4.png 1626w","sizes":"(min-width: 1626px) 1626px, 100vw"},"sources":[{"srcSet":"/static/1a41c03902ef056c6f871cbc382418f1/ae797/BLACK_MAGIC-4.webp 407w,\\n/static/1a41c03902ef056c6f871cbc382418f1/2c1f1/BLACK_MAGIC-4.webp 813w,\\n/static/1a41c03902ef056c6f871cbc382418f1/86abd/BLACK_MAGIC-4.webp 1626w","type":"image/webp","sizes":"(min-width: 1626px) 1626px, 100vw"}]},"width":1626,"height":2438}');
-
-/***/ }),
-
-/***/ "./.cache/caches/gatsby-plugin-image/3230568205.json":
-/*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/3230568205.json ***!
-  \***********************************************************/
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"layout":"constrained","backgroundColor":"#f8f8f8","images":{"fallback":{"src":"/static/233b1963a3df8e2beee8fc23e537bcbe/814bc/BLACK_MAGIC-2.png","srcSet":"/static/233b1963a3df8e2beee8fc23e537bcbe/94260/BLACK_MAGIC-2.png 394w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/34f29/BLACK_MAGIC-2.png 787w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/814bc/BLACK_MAGIC-2.png 1574w","sizes":"(min-width: 1574px) 1574px, 100vw"},"sources":[{"srcSet":"/static/233b1963a3df8e2beee8fc23e537bcbe/a3e1f/BLACK_MAGIC-2.webp 394w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/409ea/BLACK_MAGIC-2.webp 787w,\\n/static/233b1963a3df8e2beee8fc23e537bcbe/dfafd/BLACK_MAGIC-2.webp 1574w","type":"image/webp","sizes":"(min-width: 1574px) 1574px, 100vw"}]},"width":1574,"height":2360}');
-
-/***/ }),
-
-/***/ "./.cache/caches/gatsby-plugin-image/799673234.json":
-/*!**********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/799673234.json ***!
-  \**********************************************************/
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"layout":"constrained","images":{"fallback":{"src":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png","srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/f1c6c/icon-alter.png 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/80d5c/icon-alter.png 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/d5040/icon-alter.png 108w","sizes":"(min-width: 108px) 108px, 100vw"},"sources":[{"srcSet":"/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/391be/icon-alter.webp 27w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/284f9/icon-alter.webp 54w,\\n/static/9a4fdb8ddcb2cdb6d5ec8d837c18ab1b/4a845/icon-alter.webp 108w","type":"image/webp","sizes":"(min-width: 108px) 108px, 100vw"}]},"width":108,"height":109}');
 
 /***/ }),
 
