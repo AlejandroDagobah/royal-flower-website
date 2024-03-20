@@ -2,9 +2,10 @@ import * as React from "react"
 import Header from '../components/header'
 import Slider from "../components/slider"
 
+
 import info from "../info.json"
 import { animate, motion, scroll } from "framer-motion"
-
+import { useStaticQuery, graphql } from "gatsby"
 import { IconMouse } from "@tabler/icons-react"
 
 import Footer from "../components/footer"
@@ -14,7 +15,19 @@ export default function IndexPage(){
   const [visible, setVisible] = React.useState(false)
   const [currentNumber, setCurrentNumber] = React.useState(1)
 
+  const data = useStaticQuery(graphql`
+      query TestQuery {
+        wpPage{
+          content,
+          title
+        }
+      }
+  `)
+
+  console.log(data.wpPage.title);
+
   React.useEffect(()=>{
+
 
     const hero = document.getElementById('hero-video')
 
@@ -108,7 +121,7 @@ export default function IndexPage(){
 
   return (
     <main className="flex flex-col relative">
-
+      {data.wpPage.title}
       <Form visible={visible} setVisible={setVisible}/>
       <Header/>
 

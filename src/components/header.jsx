@@ -1,10 +1,15 @@
 import * as React from 'react'
 import info from '../info.json'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql} from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
 import { navigate } from 'gatsby'
+
 export default function Header() {
+
+
+
+
 
     const menuLeft = info.header.menuLeft.map((item)=>{
         
