@@ -43,7 +43,7 @@ export default function IndexPage(){
 
       
       if(boolWheel === false){
-        animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 1.5}, {type: 'spring'})
+        animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 2}, {type: 'spring'})
         boolWheel = true
       }
 

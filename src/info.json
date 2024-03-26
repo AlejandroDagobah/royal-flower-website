@@ -13,7 +13,19 @@
         ],
         "searchBar":{
             "text": "What are you looking for?"
-        }
+        },
+        "categories":[
+            {"name": "Roses", "url":"#", "subcategories": [{"name": "Spring Collection", "url": "#"}, {"name": "Summer Collection", "url": "#"}, {"name": "Mother's Day Collection", "url": "#"}]},
+            {"name": "Color", "url":"#", "subcategories": [{"name": "Red", "url": "#"}, {"name": "Yellow", "url": "#"}, {"name": "Orange", "url": "#"},  {"name": "Cream", "url": "#"}]},
+            {"name": "New Varieties", "url":"#", "subcategories": [{"name": "Spring Collection", "url": "#"}]}
+        ],
+        "relatedCategories":[
+            {"name": "Spring Collection", "url":"#"},
+            {"name": "Mother's Day Collection", "url":"#"},
+            {"name": "Wedding", "url":"#"},
+            {"name": "4th of July", "url":"#"},
+            {"name": "Yum Kippur", "url":"#"}
+        ]
     },
     "hero":{
         "text": "Discover our collection"

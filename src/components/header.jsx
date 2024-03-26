@@ -3,7 +3,7 @@ import info from '../info.json'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
-
+import Slider from './slider-header'
 export default function Header() {
 
     const menuLeft = info.header.menuLeft.map((item)=>{
@@ -23,6 +23,36 @@ export default function Header() {
             <Link to={item.url} className='uppercase no-underline hover:underline underline-offset-8'>{item.value}</Link>      
         )
 
+    })
+
+    const categories = info.header.categories.map((item)=>{
+
+        const lista = item.subcategories.map((item)=>{
+            return(
+                <li className='mb-2 group w-fit'>
+                    <a href={item.url}>{item.name}</a>
+                    <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-charcoal'></span>
+                </li>
+            )
+        })
+
+        return(
+            <div className='px-10 pt-6 pb-16 border-r min-w-[300px]'>
+                <h6 className='uppercase text-base mb-2'>{item.name}</h6>
+                <ul className='ml-4'>
+                    {lista}
+                </ul>
+            </div>
+        )
+    })
+
+    const relatedCategories = info.header.relatedCategories.map((item)=>{
+        return(
+            <div className='group'>
+                 <a href={item.url}>{item.name}</a>
+                <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-charcoal'></span>
+            </div>
+        )
     })
 
     return(
@@ -58,6 +88,28 @@ export default function Header() {
 
                 <input type="text" className='w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none' placeholder={info.header.searchBar.text}/>
             </div>
+
+            {/* <div className='flex flex-row justify-start border-b border-charcoal hidden lg:flex'>
+                
+                {categories}
+
+            </div> */}
+
+            <div className='flex flex-col justify-center items-center border-b border-charcoal hidden lg:flex pt-6 pb-10'>
+                <Link to='#' className='uppercase no-underline hover:underline underline-offset-8 mb-6'>Releated Categories</Link>      
+                <div className='flex flex-row gap-12'>
+                    {relatedCategories}
+                </div>
+            </div>
+            <div className='flex flex-col justify-center items-center border-b border-charcoal hidden lg:flex pt-6 pb-16'>
+                <Link to='#' className='uppercase no-underline hover:underline underline-offset-8 mb-6'>Releated Products</Link>      
+                <Slider/>
+
+            </div>
+
+
+
+
         </header>
     )
 }
