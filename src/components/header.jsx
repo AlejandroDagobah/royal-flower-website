@@ -4,10 +4,10 @@ import { Link, useStaticQuery, graphql} from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
 import Slider from './slider-header'
+import { navigate } from 'gatsby'
+
+
 export default function Header() {
-
-
-
 
 
     const menuLeft = info.header.menuLeft.map((item)=>{
@@ -96,7 +96,7 @@ export default function Header() {
 
             </div> */}
 
-            <div className='flex flex-col justify-center items-center border-b border-charcoal hidden lg:flex pt-6 pb-10'>
+            {/* <div className='flex flex-col justify-center items-center border-b border-charcoal hidden lg:flex pt-6 pb-10'>
                 <Link to='#' className='uppercase no-underline hover:underline underline-offset-8 mb-6'>Releated Categories</Link>      
                 <div className='flex flex-row gap-12'>
                     {relatedCategories}
@@ -106,7 +106,7 @@ export default function Header() {
                 <Link to='#' className='uppercase no-underline hover:underline underline-offset-8 mb-6'>Releated Products</Link>      
                 <Slider/>
 
-            </div>
+            </div> */}
 
 
 

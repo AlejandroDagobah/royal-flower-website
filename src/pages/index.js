@@ -2,7 +2,6 @@ import * as React from "react"
 import Header from '../components/header'
 import Slider from "../components/slider"
 
-
 import info from "../info.json"
 import { animate, motion, scroll } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
@@ -16,15 +15,18 @@ export default function IndexPage(){
   const [currentNumber, setCurrentNumber] = React.useState(1)
 
   const data = useStaticQuery(graphql`
-      query TestQuery {
-        wpPage{
-          content,
-          title
+      query HomePage {
+        wpPage(title: {eq: "Home"}) {
+          homepage {
+            videoYoutubeLink {
+              url
+            }
+          }
         }
       }
   `)
 
-  console.log(data.wpPage.title);
+    console.log(data)    
 
   React.useEffect(()=>{
 
@@ -121,7 +123,6 @@ export default function IndexPage(){
 
   return (
     <main className="flex flex-col relative">
-      {data.wpPage.title}
       <Form visible={visible} setVisible={setVisible}/>
       <Header/>
 
@@ -138,8 +139,19 @@ export default function IndexPage(){
           </div>
         </div>
         <video autoPlay muted loop className="min-h-[100vh] min-w-[100%] opacity-60 z-0 absolute">
-          <source src={'../../static/home-page-hero-video.mp4'} type="video/mp4"/>
+          <source src={data.wpPage.homepage.videoYoutubeLink.url} type="video/mp4"/>
         </video>
+{/* 
+      <iframe 
+        src={data.wpPage.homepage.videoYoutubeLink.url+ '?autoplay=&controls=0&loop=1'}
+        frameBorder="0"
+        allowFullScreen
+        allow="autoplay"
+        modestbranding
+        rel='0'
+        loop='1'
+        className="h-[100vh] w-full"
+      /> */}
 
       </motion.div>
 
