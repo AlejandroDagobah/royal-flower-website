@@ -11,8 +11,10 @@ export default function Slider(props){
     const [currentNumber, setCurrentNumber] = React.useState(1)
 
 
-    const [productList, setProductList] = React.useState([...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products])
+    const [productList, setProductList] = React.useState([...props.productsList])
 
+
+    console.log("productList", productList);
 
     React.useEffect(()=>{
 
@@ -234,9 +236,9 @@ export default function Slider(props){
     })
 
     const products = productList.map((product, index)=>{
-        
+        console.log(product);
         return(
-            <ProductCard image={product.image} size={15} title={product.title} index={index}/>
+            <ProductCard image={product.featuredImage.node.gatsbyImage} title={product.title} slug={product.slug} index={index} size={15}/>
         )
     })
 

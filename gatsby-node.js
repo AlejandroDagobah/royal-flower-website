@@ -10,6 +10,13 @@ exports.createPages = async ({graphql, actions}) => {
                     slug
                 }
             }
+
+            allWpCategory {
+                nodes {
+                    slug
+                    name
+                }
+            }
         }
         
     `) 
@@ -20,6 +27,14 @@ exports.createPages = async ({graphql, actions}) => {
         actions.createPage({
             path: '/product/' + node.slug,
             component: path.resolve('./src/templates/product-template.js'),
+            context: { slug: node.slug}
+        })
+    });
+
+    data.allWpCategory.nodes.forEach(node => {
+        actions.createPage({
+            path: '/category/' + node.slug,
+            component: path.resolve('./src/templates/category-template.js'),
             context: { slug: node.slug}
         })
     });

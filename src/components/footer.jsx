@@ -28,7 +28,7 @@ export default function Footer(props){
                 <nav className='md:flex-1 flex flex-row gap-4 items-end'>
                     <div className='flex flex-col'>
                         <span className='uppercase text-2xs md:text-sm'>Made in Ecuador</span>
-                        <span className='uppercase font-bold text-xs md:text-base'>Red Roses Collection</span>
+                        <span className='uppercase font-bold text-xs md:text-base'>{props.collection}</span>
                     </div>
                     <span className='font-caslon text-5xl ml-20 hidden md:block -mb-2'>0{props.number}/0{info.slider.quantity}</span>
                 </nav>
