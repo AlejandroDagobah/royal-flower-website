@@ -26,8 +26,6 @@ export default function IndexPage(){
       }
   `)
 
-    console.log(data)    
-
   React.useEffect(()=>{
 
 

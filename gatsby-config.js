@@ -6,7 +6,7 @@
 module.exports = {
   siteMetadata: {
     title: `Royal Flowers`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://royalflowers.netlify.app/`
   },
   plugins: [
     
