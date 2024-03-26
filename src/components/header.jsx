@@ -1,10 +1,14 @@
 import * as React from 'react'
 import info from '../info.json'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql} from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
 import Slider from './slider-header'
 export default function Header() {
+
+
+
+
 
     const menuLeft = info.header.menuLeft.map((item)=>{
         
@@ -16,9 +20,6 @@ export default function Header() {
 
     const menuRight = info.header.menuRight.map((item)=>{
         
-
-        console.log(item);
-
         return(
             <Link to={item.url} className='uppercase no-underline hover:underline underline-offset-8'>{item.value}</Link>      
         )
@@ -73,7 +74,7 @@ export default function Header() {
                 <nav className='flex-1 flex flex-row gap-4 items-center'>
                     {menuLeft}
                 </nav>
-                <div className=' flex justify-center' style={{height: "100%"}}>
+                <div onClick={()=>{navigate("/")}} className='cursor-pointer flex justify-center' style={{height: "100%"}}>
                     <StaticImage className='max-w-[180px] bg-cover my-auto' placeholder="color" src='../images/logo-royal-flower.png'/>
                 </div>
                 <nav className='flex-1 flex flex-row gap-4 justify-end items-center'>

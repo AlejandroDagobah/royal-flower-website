@@ -6,7 +6,10 @@ import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import ProductCard from './product-card'
 import Footer from './footer'
 
-export default function Slider(){
+export default function Slider(props){
+
+    const [currentNumber, setCurrentNumber] = React.useState(1)
+
 
     const [productList, setProductList] = React.useState([...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products, ...info.slider.products])
 
@@ -37,7 +40,11 @@ export default function Slider(){
         
         slider.addEventListener('mousewheel', (e)=>{
             e.preventDefault()
+      
+
             slider.scrollLeft += e.deltaY;
+
+          
 
 
             // move += (e.deltaY * 0.4)
@@ -79,6 +86,62 @@ export default function Slider(){
     
 
         })
+
+        var startX,
+            startY,
+            dist,
+            threshold = 150, //required min distance traveled to be considered swipe
+            allowedTime = 200, // maximum time allowed to travel that distance
+            elapsedTime,
+            startTime
+
+        // slider.addEventListener('touchstart', function(e){
+        //     var touchobj = e.changedTouches[0]
+        //     dist = 0
+        //     startX = touchobj.pageX
+        //     startY = touchobj.pageY
+        //     startTime = new Date().getTime() // record time when finger first makes contact with surface
+        //     e.preventDefault()
+        // }, false)
+
+        // slider.addEventListener('touchmove', function(e){
+        //     e.preventDefault() // prevent scrolling when inside DIV
+        // }, false)
+
+        // slider.addEventListener('touchend', function(e){
+        //     var touchobj = e.changedTouches[0]
+        //     dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
+            
+        //     console.log((touchobj.pageX*(-1)), touchobj.pageX);
+
+        //     if( touchobj.pageX > startX){
+        //         slider.scrollLeft += (touchobj.pageX*(-1))
+        //         console.log("FUE HACIA LA IZQ");
+        //     }
+        //     if(touchobj.pageX < startX){
+        //         slider.scrollLeft += (touchobj.pageX*(1))
+        //         console.log("FUE HACIA LA DER");
+
+
+        //     }
+
+        //     e.preventDefault()
+        // }, false)
+
+        // slider.addEventListener('wheel', (e)=>{
+        //     e.preventDefault()
+            
+        //     if(currentNumber < 5){
+
+        //         setCurrentNumber((prevState)=>prevState+1)
+
+        //     }else{
+        //         setCurrentNumber(1)
+
+        //     }
+               
+
+        // })
         
         
 
@@ -173,7 +236,7 @@ export default function Slider(){
     const products = productList.map((product, index)=>{
         
         return(
-            <ProductCard image={product.image} title={product.title} index={index}/>
+            <ProductCard image={product.image} size={15} title={product.title} index={index}/>
         )
     })
 
@@ -183,8 +246,6 @@ export default function Slider(){
             <div className="w-full h-full grid grid-flow-col auto-cols-max items-center gap-3 overflow-x-hidden overflow-y-none whitespace-nowrap flex-nowrap" id='product-slider'>
                 {products}
             </div>
-
-            <Footer/>
 
         </div>
 
