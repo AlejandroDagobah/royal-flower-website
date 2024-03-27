@@ -45,12 +45,10 @@ export default function IndexPage(){
   
   const productsList = data.wpCategory.posts.nodes
 
-  console.log(data);
-
   React.useEffect(()=>{
 
 
-    // const hero = document.getElementById('hero-video')
+    const hero = document.getElementById('hero-video')
 
     let movement = 1
 
@@ -58,19 +56,17 @@ export default function IndexPage(){
 
       // e.preventDefault()
 
-      // console.log(e);
 
-      // // movement += e.pageY * 0.01
+      // movement += e.pageY * 0.01
       
 
-      // // if(e.deltaY < 0){
+      // if(e.deltaY < 0){
         
-      // //   hero.style.transform = `translate(0px, ${movement}px)`
-      // // }else{
-      // //   hero.style.transform = `translate(0px, -${movement}px)`
+      //   hero.style.transform = `translate(0px, ${movement}px)`
+      // }else{
+      //   hero.style.transform = `translate(0px, -${movement}px)`
 
-      // // }
-      // console.log(movement);
+      // }
 
     }
 
@@ -79,7 +75,7 @@ export default function IndexPage(){
 
       
       if(boolWheel === false){
-        // animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 2}, {type: 'spring'})
+        animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 2}, {type: 'spring'})
         boolWheel = true
       }
 
@@ -87,7 +83,7 @@ export default function IndexPage(){
 
     function handleswipe(isUpSwipe){
       if (isUpSwipe && boolWheel === false){
-          // animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 1.5}, {type: 'spring'})
+          animate(hero, {transform: ['translate(0px, 0px)', 'translate(0px, -100vh)'], opacity: [100, 100]}, {duration: 1.5}, {type: 'spring'})
           boolWheel = true
 
       }else{
@@ -146,7 +142,6 @@ export default function IndexPage(){
       <Header/>
 
 
-      {/* HERO
       <motion.div 
           className="overflow-hidden top-0 left-0 min-w-[100%] min-h-[100vh] h-[100vh] bg-charcoal z-10 absolute transition-all"
           id="hero-video"
@@ -160,18 +155,8 @@ export default function IndexPage(){
         <video autoPlay muted loop className="min-h-[100vh] min-w-[100%] opacity-60 z-0 absolute">
           <source src={data.wpPage.homepage.videoYoutubeLink.url} type="video/mp4"/>
         </video>
-      <iframe 
-        src={data.wpPage.homepage.videoYoutubeLink.url+ '?autoplay=&controls=0&loop=1'}
-        frameBorder="0"
-        allowFullScreen
-        allow="autoplay"
-        modestbranding
-        rel='0'
-        loop='1'
-        className="h-[100vh] w-full"
-      /> 
 
-      </motion.div> */}
+      </motion.div>
 
       <Slider productsList={productsList}/>
 

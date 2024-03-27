@@ -14,7 +14,7 @@ export default function Slider(props){
     const [productList, setProductList] = React.useState([...props.productsList])
 
 
-    console.log("productList", productList);
+    // console.log("productList", productList);
 
     React.useEffect(()=>{
 
@@ -236,7 +236,7 @@ export default function Slider(props){
     })
 
     const products = productList.map((product, index)=>{
-        console.log(product);
+        // console.log(product);
         return(
             <ProductCard image={product.featuredImage.node.gatsbyImage} title={product.title} slug={product.slug} index={index} size={15}/>
         )

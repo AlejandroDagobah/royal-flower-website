@@ -10,7 +10,7 @@ import Footer from "../components/footer";
 
 export default function categoryTemplate({ data }){
 
-
+    console.log(data);
     const productList = data.wpCategory.posts.nodes
     const collectionName = data.wpCategory.name
     return(

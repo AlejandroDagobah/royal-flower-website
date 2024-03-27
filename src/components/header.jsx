@@ -4,16 +4,69 @@ import { Link, useStaticQuery, graphql} from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { IconSearch, IconMenu2 } from '@tabler/icons-react'
 import Slider from './slider-header'
+import DropdownMenu from './dropdown-menu'
 import { navigate } from 'gatsby'
+
+function flatToHierarchicalMenu(data=[], {idKey='key', parentKey='parentId', childrenKey='children'} = {}) {
+
+    const tree = []
+    const childrenOf = {}
+    data.forEach((item) =>{
+        const newItem = {...item}
+        const { [idKey]: id, [parentKey]: parentId=0 } = newItem
+        
+        childrenOf[id] = childrenOf[id] || []
+        newItem[childrenKey] = childrenOf[id]
+        parentId ? (childrenOf[parentId] = childrenOf[parentId] || []).push(newItem) : tree.push(newItem)
+
+    })
+    return tree
+
+}
 
 
 export default function Header() {
 
+    const [drop, setDrop] = React.useState('')
 
-    const menuLeft = info.header.menuLeft.map((item)=>{
+    const data = useStaticQuery(graphql`
+            query MyQuery {
+                wpMenu(name: {eq: "Categories Menu"}) {
+                name
+                menuItems {
+                    nodes {
+                        key: id
+                        label
+                        path
+                        uri
+                        parentId
+                        children{
+                            id
+                        }
+                    }
+                }
+                }
+            }
+
+        `)
+    
+
+
+    const hierarchicalMenu = flatToHierarchicalMenu(data.wpMenu.menuItems.nodes)
+
+
+    
+    const menuLeft = hierarchicalMenu.map((item)=>{
+        
+        const index = item.uri.slice(0, -1).lastIndexOf("/")
+        const slug = item.uri.slice(index, -1)      
         
         return(
-            <Link to={item.url} className='uppercase no-underline hover:underline underline-offset-8'>{item.value}</Link>      
+            <div className='group'>
+                <Link to={`/category${slug}`} className='uppercase' onMouseOver={()=>setDrop(item.key)}>{item.label}</Link>      
+                <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-charcoal'></span>
+
+            </div>
         )
 
     })
@@ -56,8 +109,22 @@ export default function Header() {
         )
     })
 
+    const dropdownMenus = hierarchicalMenu.map((downMenu)=>{
+
+        let flag = false
+
+        drop === downMenu.key ? flag = true : flag = false;
+
+        return(
+            <div id={downMenu.key} className={`${flag ? 'opacity-100 visible' : 'opacity-0 hidden'}`}>
+                <DropdownMenu downMenu={downMenu}/>
+            </div>
+        )
+
+    })
+
     return(
-        <header className='w-[100%] z-20 bg-cream fixed'>
+        <header className='w-[100%] z-20 bg-cream fixed' onMouseLeave={()=>setDrop(false)}>
             {/* Phone */}
             <div className='flex flex-row justify-between py-3 px-[20px] border-b border-charcoal lg:hidden'>
                 <div className=' flex justify-center' style={{height: "100%"}}>
@@ -90,6 +157,10 @@ export default function Header() {
                 <input type="text" className='w-full bg-cream uppercase placeholder:text-gray border-none rounded-none focus:outline-none' placeholder={info.header.searchBar.text}/>
             </div>
 
+            {dropdownMenus}
+
+
+
             {/* <div className='flex flex-row justify-start border-b border-charcoal hidden lg:flex'>
                 
                 {categories}
@@ -102,6 +173,7 @@ export default function Header() {
                     {relatedCategories}
                 </div>
             </div>
+
             <div className='flex flex-col justify-center items-center border-b border-charcoal hidden lg:flex pt-6 pb-16'>
                 <Link to='#' className='uppercase no-underline hover:underline underline-offset-8 mb-6'>Releated Products</Link>      
                 <Slider/>
