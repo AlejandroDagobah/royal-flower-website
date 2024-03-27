@@ -1,10 +1,21 @@
 import React from "react";
-import Header from "../components/header";
 import {GatsbyImage} from 'gatsby-plugin-image'
+import { graphql } from "gatsby";
+
+import {Swiper, SwiperSlide} from "swiper/react"
+import {Navigation, Pagination} from 'swiper/modules'
+
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+// import 'swiper/css/pagination'
+// import 'swiper/css/navigation'
+
+
 import info from "../info.json";
+
+import Header from "../components/header";
 import ProductCard from "../components/product-card";
 import Form from "../components/form";
-import { graphql } from "gatsby";
 
 export default function ProductTemplate({ data }) {
 
@@ -38,44 +49,72 @@ export default function ProductTemplate({ data }) {
 
     })
 
-    console.log(featuredImage);
 
     return(
         <main>
             <Header/>
             <Form visible={visible} setVisible={setVisible}/>
 
+            <div className="mt-12">
+                <Swiper
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    className="mt-12"
+                    >
+                    <SwiperSlide>                                
+                        <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                    </SwiperSlide>
+                    <SwiperSlide>                                
+                        <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                    </SwiperSlide>                    
+                    <SwiperSlide>                                
+                        <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                    </SwiperSlide>
+                    <SwiperSlide>                                
+                        <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                    </SwiperSlide>
+                   ...
+                </Swiper>
+
+            </div>
             <div className="flex flex-col md:flex-row items-center w-full lg:h-[100vh] px-20 gap-[5rem]">
 
-                <div className="flex flex-auto flex-col mt-24 max-w-[50vw]">
-                    <div className="flex flex-row justify-center items-center">
+                <div className="flex-1 w-[60vw]">
 
-                        {/* <div className={`snap-center duration-300 ease-in-out transition-all cursor-pointer z-0`}>
-                            <StaticImage src={'../images/black-magic-4.png'} alt="" className=''/>
-                        </div>
-                        <div className={`shadow-md duration-300 ease-in-out transition-all z-10 cursor-pointer`}>
-                            <StaticImage src={'../images/black-magic-2.png'} alt="" className=''/>
-                        </div>
-                        <div className={`duration-300 ease-in-out transition-all cursor-pointer z-0`}>
-                            <StaticImage src={'../images/black-magic-3.png'} alt="" className=''/>
-                        </div>
-                   */}
-                    
+
+                  
+
+                        {/* <Swiper
+                            spaceBetween={0}
+                            slidesPerView={3}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                        >
+                            <SwiperSlide>
+                                <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
+                            </SwiperSlide>
+
+                        </Swiper> */}
+{/* 
                          <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className='w-[600px]'/>
                          <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className=''/>
                          <GatsbyImage image={featuredImage.node.gatsbyImage} alt="" className=''/>
-                        {/*<Img fluid={} alt="" className='scale-125  z-10 shadow-sm'/>
-                        <Img fluid={} alt="" className=''/> */}
-
-                   
-                    </div>
-                    <div className=' flex gap-5 justify-center h-[50px] mt-32'>
+              */}
+                    {/* <div className=' flex gap-5 justify-center h-[50px] mt-32'>
                         {lines}
-                    </div>
+            </div>*/}
                 </div>
 
 
-                <div className="flex flex-col gap-6 w-full md:w-[100%] justify-center mt-8 mb-14">
+                <div className="flex flex-col flex-1 gap-6 w-full md:w-[100%] justify-center mt-8 mb-14">
                     <div>
                         <h1 className="font-bold uppercase mb-4 md:mb-8 w-full text-center">{title}</h1>
                         <p dangerouslySetInnerHTML={{ __html: content}}></p>
